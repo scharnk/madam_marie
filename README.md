@@ -2,7 +2,7 @@
 
 ![alt text](madam_marie_image_bruce.jpg)
 
-<h3>Script to scrape all tarot card data from 'biddytarot.com' and use for tarot reading spreads</h3>
+<h3>Script to scrape all tarot card data from 'biddytarot.com' and use for reading tarot spreads</h3>
 
 <h4>Takes major and minor arcana card data down as dict() with card title as key and values including upright and reversed keywords, meanings, and overall card description.</h4>
 <br>
