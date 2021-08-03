@@ -8,7 +8,7 @@ from bokeh.plotting import figure, show
 
 ################################ GET DATA ######################################
 
-project_folder = os.path.expanduser('~/code/GitHub/streamlit-framework')
+project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
 load_dotenv(os.path.join(project_folder,'.env'))
 key = os.getenv("API_KEY")
 ts = TimeSeries(key, output_format='pandas')
