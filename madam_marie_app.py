@@ -15,7 +15,7 @@ ts = TimeSeries(key, output_format='pandas')
 
 ############################### STREAMLIT ######################################
 # Use the full page instead of a narrow central column
-st.beta_set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 header = st.beta_container()
 dataset = st.beta_container()
