@@ -73,7 +73,7 @@ with dataset:
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
 #     st.bokeh_chart(p, use_container_width=True)
 
-col1, col2, col3 = st.beta_columns(3, (1,1,1))
+col1, col2, col3 = st.beta_columns((1,1,1))
 
 with col1:
     st.header("Moon")
