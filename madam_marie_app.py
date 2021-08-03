@@ -73,9 +73,9 @@ with dataset:
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
 #     st.bokeh_chart(p, use_container_width=True)
 
-    st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', height=600)
-    st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', height=600)
-    st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', height=600)
+    st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
+    st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg')
+    st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg')
 
     #
     # st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg'],width=200)
