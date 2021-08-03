@@ -20,13 +20,14 @@ features = st.beta_container()
 test = st.sidebar.beta_container()
 
 with header:
-    st.title('Stock Ticker Milestone Project')
-    st.text('Stock data acquired via the Alpha Vantage API')
+    st.title('Fortune Teller Tarot Reader')
+    st.text('Data scraped from BiddyTarot.com')
+    st.text('Data scraped from BiddyTarot.com')
     st.text('App deployed using Heroku')
 
 with test:
-    st.title('Select Features')
-    st.text("Type the name of a stock ticker")
+    st.title('Select Spread')
+    # st.text("Type the name of a stock ticker")
     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
 
@@ -61,8 +62,17 @@ with dataset:
     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
     st.bokeh_chart(p, use_container_width=True)
+    st.markdown("![Alt Text](https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg)"
+# >>> from PIL import Image
+# >>> image = Image.open('sunrise.jpg')
+# >>>
+# >>> st.image(image, caption='Sunrise by the mountains')
 
-
+# https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg
+# https://en.m.wikipedia.org/wiki/The_Magician_(Tarot_card)#/media/File%3ARWS_Tarot_01_Magician.jpg
+# https://en.m.wikipedia.org/wiki/Ace_of_Wands_(Tarot_card)#/media/File%3AWands01.jpg
+# https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg
+# https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg
 ################################################################################
 # useful links:
 #
