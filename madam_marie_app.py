@@ -22,7 +22,7 @@ test = st.sidebar.beta_container()
 with header:
     st.title('Fortune Teller Tarot Reader')
     st.text('Data scraped from BiddyTarot.com')
-    st.text('Data scraped from BiddyTarot.com')
+    st.text('')
     st.text('App deployed using Heroku')
 
 with test:
@@ -30,8 +30,9 @@ with test:
     # st.text("Type the name of a stock ticker")
     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
-
-    display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
+    display1 = ('Major','Minor')
+    
+#     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
     options1 = list(range(len(display1)))
     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
@@ -55,15 +56,22 @@ with test:
     y = US_daily_market['high']
 
 with dataset:
-    st.header("Stock Market Data For: '{}'".format(ticker))
-    st.text('Data visualization constructed with Bokeh, from hourly intraday stock data')
-    g1_col, g2_col = st.beta_columns(2)
-    p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
-    p.line(date, y, legend_label="Max / day (USD)", line_width=2)
-    p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
-    st.bokeh_chart(p, use_container_width=True)
-    st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', width=200)
+    st.header("Three Tarot Spread")
+    st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
+    st.text('The three card spread can represent several different meanings including:')
+        st.text('[Past, Present, Future]')
+        st.text('[Mind, Body, Soul]')
+        st.text('[Background, Problem, Advice]')
+#     st.header("Stock Market Data For: '{}'".format(ticker))
+#     st.text('Data visualization constructed with Bokeh, from hourly intraday stock data')
+#     g1_col, g2_col = st.beta_columns(2)
+#     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
+#     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
+#     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
+#     st.bokeh_chart(p, use_container_width=True)
+    st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg'],width=200)
     st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
+    st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
 
 # >>> from PIL import Image
