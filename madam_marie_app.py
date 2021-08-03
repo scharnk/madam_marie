@@ -25,35 +25,35 @@ with header:
     st.text('')
     st.text('App deployed using Heroku')
 
-with test:
-    st.title('Select Spread')
-    # st.text("Type the name of a stock ticker")
-    ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
-    data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
-    display1 = ('Major','Minor')
+# with test:
+#     st.title('Select Spread')
+#     # st.text("Type the name of a stock ticker")
+#     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
+#     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
+#     display1 = ('Major','Minor')
     
-#     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
-    options1 = list(range(len(display1)))
-    YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
-    monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
-    MONTH = monthh+1
+# #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
+#     options1 = list(range(len(display1)))
+#     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
+#     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
+#     MONTH = monthh+1
 
-    cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
-    data.columns = cols
-    data['day'] = data.index.date
-    data['time'] = data.index.time
+#     cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
+#     data.columns = cols
+#     data['day'] = data.index.date
+#     data['time'] = data.index.time
 
-    US_daily_market = data
-    US_daily_market.index = pd.to_datetime(US_daily_market.index, format='%Y-%m-%d')
+#     US_daily_market = data
+#     US_daily_market.index = pd.to_datetime(US_daily_market.index, format='%Y-%m-%d')
 
-    US_daily_market['month'] = US_daily_market.index.month
-    US_daily_market['year'] = US_daily_market.index.year
-    US_daily_market = US_daily_market.reset_index()
-    US_daily_market = US_daily_market.loc[(US_daily_market['month'] == int(MONTH)) & (US_daily_market['year'] == int(YEAR))]
+#     US_daily_market['month'] = US_daily_market.index.month
+#     US_daily_market['year'] = US_daily_market.index.year
+#     US_daily_market = US_daily_market.reset_index()
+#     US_daily_market = US_daily_market.loc[(US_daily_market['month'] == int(MONTH)) & (US_daily_market['year'] == int(YEAR))]
 
-    date = US_daily_market['day']
-    x = US_daily_market['low']
-    y = US_daily_market['high']
+#     date = US_daily_market['day']
+#     x = US_daily_market['low']
+#     y = US_daily_market['high']
 
 with dataset:
     st.header("Three Tarot Spread")
