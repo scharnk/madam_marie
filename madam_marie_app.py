@@ -73,18 +73,19 @@ with dataset:
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
 #     st.bokeh_chart(p, use_container_width=True)
 
-    c1 = st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
-    c2 = st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg')
-    c3 = st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg')
+    # c1 = st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
+    # c2 = st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg')
+    # c3 = st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg')
 
     #
-    # st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg'],width=200)
+    st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
     # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
     # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
 
     # Space out the maps so the first one is 2x the size of the other three
-    c1, c2, c3 = st.beta_columns((1, 1, 1))
+    # c1, c2, c3 = st.beta_columns((1, 1, 1))
+
 # >>> from PIL import Image
 # >>> image = Image.open('sunrise.jpg')
 # >>>
