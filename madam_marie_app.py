@@ -62,10 +62,8 @@ with dataset:
     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
     st.bokeh_chart(p, use_container_width=True)
-    # st.markdown("![Alt Text](https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg)")
-    # st.image("en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg")
     st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
-    st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg)")
+    st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
     # st.markdown("![Alt Text](https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg)")
 # https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg
     # ![Image Description](upload://86TA7dB3o4z6meIQX3TajkaklNx.jpeg)
