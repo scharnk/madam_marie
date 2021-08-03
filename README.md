@@ -16,6 +16,8 @@ Takes major and minor arcana card data, including five columns:
 
 <br>
 78 card deck descriptions are based on imagery from the <i>Rider-Waite deck.</i><br><br>
+There are 22 major arcana cards and 56 minor arcana cards
+There is one extra face card compared to normal 52 card decks (page)
 
 Minor card suits include: 
 
@@ -23,5 +25,7 @@ Minor card suits include:
 2. Swords
 3. Pentacles
 4. Wands
+
+Each suit includes ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, page, knight, queen, and king
 
 
