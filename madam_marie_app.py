@@ -31,7 +31,7 @@ with header:
 #     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
 #     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
 #     display1 = ('Major','Minor')
-    
+
 # #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
 #     options1 = list(range(len(display1)))
 #     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
@@ -59,9 +59,9 @@ with dataset:
     st.header("Three Tarot Spread")
     st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
     st.text('The three card spread can represent several different meanings including:')
-        st.text('[Past, Present, Future]')
-        st.text('[Mind, Body, Soul]')
-        st.text('[Background, Problem, Advice]')
+    st.text('[Past, Present, Future]')
+    st.text('[Mind, Body, Soul]')
+    st.text('[Background, Problem, Advice]')
 #     st.header("Stock Market Data For: '{}'".format(ticker))
 #     st.text('Data visualization constructed with Bokeh, from hourly intraday stock data')
 #     g1_col, g2_col = st.beta_columns(2)
