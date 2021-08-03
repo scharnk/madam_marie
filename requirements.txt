@@ -1,0 +1,8 @@
+pandas
+streamlit
+plotly
+python-dotenv
+altair
+pandas_bokeh
+requests
+alpha_vantage
