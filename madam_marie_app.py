@@ -73,12 +73,26 @@ with dataset:
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
 #     st.bokeh_chart(p, use_container_width=True)
 
+col1, col2, col3 = st.beta_columns(3)
+
+with col1:
+    st.header("A cat")
+    st.image("https://static.streamlit.io/examples/cat.jpg")
+
+with col2:
+    st.header("Ace of Wands")
+    st.image("https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg")
+
+with col3:
+    st.header("Magician")
+    st.image("https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg")
+
     # c1 = st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
     # c2 = st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg')
     # c3 = st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg')
 
     #
-    st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
+    ##### st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
     # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
     # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
