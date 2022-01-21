@@ -32,7 +32,7 @@ with header:
     st.text('- App deployed using Heroku')
 
 
-card_list = [
+card_list = (
              "Fool",
              "The Magician",
              "High Priestess",
@@ -55,7 +55,7 @@ card_list = [
              "Sun",
              "Judgement",
              "World"
-             ]
+             )
 
 
 with sidebar:
@@ -85,6 +85,7 @@ with sidebar:
     "Sun",
     "Judgement",
     "World"])
+    CARD2 = st.selectbox('CARD 1:', card_list)
     # CARD2 = st.selectbox('CARD 1:', card_list)
     # CARD3 = st.selectbox('CARD 1:', card_list)
     # option = st.selectbox(
