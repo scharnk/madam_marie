@@ -33,9 +33,9 @@ with header:
 
 with sidebar:
     st.title('Select cards')
-    add_selectbox = st.selectbox(
-        "How would you like to be contacted?",
-        ("Email", "Home phone", "Mobile phone"))
+    # add_selectbox = st.selectbox(
+    #     "How would you like to be contacted?",
+    #     ("Email", "Home phone", "Mobile phone"))
 
     # option = st.selectbox(
     #      'How would you like to be contacted?',
