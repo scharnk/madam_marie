@@ -20,7 +20,7 @@ st.set_page_config(layout="wide")
 header = st.beta_container()
 dataset = st.beta_container()
 # features = st.beta_container()
-# test = st.sidebar.beta_container()
+sidebar = st.sidebar.beta_container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
@@ -28,19 +28,24 @@ with header:
     st.text('')
     st.text('App deployed using Heroku')
 
+with sidebar:
+    st.title('Select cards')
+
 # with test:
 #     st.title('Select Spread')
 #     # st.text("Type the name of a stock ticker")
 #     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
 #     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
-#     display1 = ('Major','Minor')
+    display1 = ('Major','Minor')
 
 # #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
 #     options1 = list(range(len(display1)))
 #     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
 #     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
 #     MONTH = monthh+1
-
+    st.selectbox(label='Card 1', options1 = display1)
+    st.selectbox(label='Card 2', options2 = )
+    st.selectbox(label='Card 3', options3 = )
 #     cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
 #     data.columns = cols
 #     data['day'] = data.index.date
@@ -72,9 +77,6 @@ with dataset:
 #     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
 #     st.bokeh_chart(p, use_container_width=True)
-
-desc = ['Upright Ace of Wands: As an Ace, this Wands card brings you pure potential – this time in the spiritual, energetic realm. Ideas are flowing to you, motivating and inspiring you to pursue a new path. You are open to receiving new opportunities that align with your Higher Self. A whole world of possibility is available to you.The Ace of Wands encourages you to follow your heart and live your passion. If you feel a strong pull towards a new project or path, but are questioning whether it will work, then this card gives you a gentle nudge to pursue your passion. You can always start out small, treating the project or idea as an experiment or trial. Then, if it feels good, keep doing it; and if it doesn’t, make adjustments and try again. Let your energy, dedication and motivation be your guides.If you have been looking for a sign about whether this is the right project, then the Ace of Wands is a clear YES! The sprouting wand and the fertile landscape in the background are all positive indications that this idea has the potential to turn into something fulfilling and energising. Use your creative energy and passion to take the first steps. Even if you prefer to plan out everything before you begin down a particular path, the Ace of Wands wants you to listen to your instincts and follow your gut. If it seems like a good idea, it probably is. So, start with a few fundamentals to get things rolling, and then continue to grow and develop your ideas through more complex activities later on. The important thing is that you act now rather than spending more time planning or researching.Keep in mind, however, that the Aces represent potential but not guaranteed results. The Ace of Wands (or any Ace) is a seed that has yet to grow into something more substantial or sustainable. The opportunity on offer shows great promise, but it will be up to you to maximise it for the long term. See this card as the spark needed to fuel a massive fire, but remember that the flash itself is not enough to keep the flames burning.The Ace of Wands may appear when you have an opportunity to grow on a personal or spiritual level. You may be interested in taking a class or investing in a course so you can follow your creative spirit. For example, you might enrol in a photography class, a Tarot course, or a self-improvement program. Trust that this experience will open you up to even more possibilities.']
-st.sidebar.selectbox(label='label', options=desc)
 
 
 col1, col2, col3 = st.beta_columns(3)
