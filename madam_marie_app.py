@@ -20,8 +20,8 @@ key = st.secrets["API_KEY"]
 st.write(
     "Has environment variable been set?:",
     os.environ["API_KEY"] == st.secrets["API_KEY"])
-key = st.secrets.API_KEY
-# ts = TimeSeries(key, output_format='pandas')
+# key = st.secrets.API_KEY
+ts = TimeSeries(key, output_format='pandas')
 
 
 # streamlit secrets management url:
