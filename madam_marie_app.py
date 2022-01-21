@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 import pandas as pd
 import os
 from dotenv import load_dotenv
@@ -6,6 +7,7 @@ from alpha_vantage.timeseries import TimeSeries
 import pandas_bokeh
 from bokeh.plotting import figure, show
 from PIL import Image
+
 
 ################################ GET DATA ######################################
 
@@ -71,7 +73,9 @@ with sidebar:
     #      'How would you like to be contacted?',
     #      ('Email', 'Home phone', 'Mobile phone'))
 
-
+    selected = option_menu("Main Menu", ["Home", 'Settings'],
+        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+    selected
 
 # with test:
 #     st.title('Select Spread')
@@ -103,9 +107,6 @@ with sidebar:
 #     US_daily_market = US_daily_market.reset_index()
 #     US_daily_market = US_daily_market.loc[(US_daily_market['month'] == int(MONTH)) & (US_daily_market['year'] == int(YEAR))]
 
-#     date = US_daily_market['day']
-#     x = US_daily_market['low']
-#     y = US_daily_market['high']
 
 with dataset:
     st.header("Three Tarot Spread")
@@ -154,10 +155,6 @@ with col3:
     # Space out the maps so the first one is 2x the size of the other three
     # c1, c2, c3 = st.beta_columns((1, 1, 1))
 
-# >>> from PIL import Image
-# >>> image = Image.open('sunrise.jpg')
-# >>>
-# >>> st.image(image, caption='Sunrise by the mountains')
 
 # https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg
 # https://en.m.wikipedia.org/wiki/The_Magician_(Tarot_card)#/media/File%3ARWS_Tarot_01_Magician.jpg
