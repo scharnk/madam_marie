@@ -111,7 +111,7 @@ with dataset:
     st.header("Three Tarot Spread")
     st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
     st.text('The three card spread can represent several different meanings including:')
-    st.subtitle('[Past, Present, Future]')
+    st.subheader('[Past, Present, Future]')
     st.text('[Mind, Body, Soul]')
     st.text('[Background, Problem, Advice]')
 #     st.header("Stock Market Data For: '{}'".format(ticker))
