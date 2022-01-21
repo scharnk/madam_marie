@@ -63,29 +63,8 @@ with sidebar:
     # add_selectbox = st.selectbox(
     #     "How would you like to be contacted?",
     #     ("Email", "Home phone", "Mobile phone"))
-    CARD1 = st.selectbox('CARD 1:', ["Fool",
-    "The Magician",
-    "High Priestess",
-    "The Empress",
-    "The Emperor",
-    "Hierophant",
-    "Lovers",
-    "Chariot",
-    "Strength",
-    "Hermit",
-    "Wheel of Fortune",
-    "Justice",
-    "Hanged Man",
-    "Death",
-    "Temperance",
-    "Devil",
-    "Tower",
-    "Star",
-    "Moon",
-    "Sun",
-    "Judgement",
-    "World"])
-    CARD2 = st.selectbox('CARD 1:', card_list)
+    CARD1 = st.selectbox('CARD 1:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
+    CARD2 = st.selectbox('CARD 2:', list(card_list), format_func=lambda x: display1[x])
     # CARD2 = st.selectbox('CARD 1:', card_list)
     # CARD3 = st.selectbox('CARD 1:', card_list)
     # option = st.selectbox(
@@ -132,7 +111,7 @@ with dataset:
     st.header("Three Tarot Spread")
     st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
     st.text('The three card spread can represent several different meanings including:')
-    st.text('[Past, Present, Future]')
+    st.subtitle('[Past, Present, Future]')
     st.text('[Mind, Body, Soul]')
     st.text('[Background, Problem, Advice]')
 #     st.header("Stock Market Data For: '{}'".format(ticker))
