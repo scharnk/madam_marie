@@ -27,16 +27,45 @@ with header:
     st.title('Fortune Teller Tarot Reader')
     img = Image.open("banner_image.jpg")
     st.image(img)
-    st.text('-- Data scraped from BiddyTarot.com')
+    st.text('- Data scraped from BiddyTarot.com')
     # st.text('')
-    st.text('-- App deployed using Heroku')
+    st.text('- App deployed using Heroku')
+
+
+card_list = [
+             "Fool",
+             "The Magician",
+             "High Priestess",
+             "The Empress",
+             "The Emperor",
+             "Hierophant",
+             "Lovers",
+             "Chariot",
+             "Strength",
+             "Hermit",
+             "Wheel of Fortune",
+             "Justice",
+             "Hanged Man",
+             "Death",
+             "Temperance",
+             "Devil",
+             "Tower",
+             "Star",
+             "Moon",
+             "Sun",
+             "Judgement",
+             "World"
+             ]
+
 
 with sidebar:
     st.title('Select cards')
     # add_selectbox = st.selectbox(
     #     "How would you like to be contacted?",
     #     ("Email", "Home phone", "Mobile phone"))
-
+    CARD1 = st.selectbox('CARD 1:', card_list)
+    CARD2 = st.selectbox('CARD 1:', card_list)
+    CARD3 = st.selectbox('CARD 1:', card_list)
     # option = st.selectbox(
     #      'How would you like to be contacted?',
     #      ('Email', 'Home phone', 'Mobile phone'))
@@ -55,7 +84,7 @@ with sidebar:
 #     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
 #     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
 #     MONTH = monthh+1
-    st.selectbox(label='Card 1', options1 = ('Major','Minor'))
+    # st.selectbox(label='Card 1', options1 = ('Major','Minor'))
     # st.selectbox(label='Card 1', options1 = display1)
     # st.selectbox(label='Card 2', options2 = display1)
     # st.selectbox(label='Card 3', options3 = display1)
