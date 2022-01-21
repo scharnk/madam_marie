@@ -81,7 +81,7 @@ with dataset:
 #     st.bokeh_chart(p, use_container_width=True)
 
 
-col1, col2, col3 = st.columns()
+col1, col2, col3 = st.columns([1, 1, 1])
 # col1, col2, col3 = st.beta_columns((1,1,0.5))) also works
 
 with col1:
