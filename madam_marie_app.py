@@ -34,7 +34,7 @@ with header:
     st.text('- App deployed using Heroku')
 
 
-card_list = (
+major_arcana = [
              "Fool",
              "The Magician",
              "High Priestess",
@@ -57,26 +57,77 @@ card_list = (
              "Sun",
              "Judgement",
              "World"
-             )
+             ]
 
+minor_arcana = [
+                    'ace of cups',
+                    'two of cups',
+                    'three of cups',
+                    'four of cups',
+                    'five of cups',
+                    'six of cups',
+                    'seven of cups',
+                    'eight of cups',
+                    'nine of cups',
+                    'ten of cups',
+                    'page of cups',
+                    'queen of cups',
+                    'king of cups',
+                    'ace of swords',
+                    'two of swords',
+                    'three of swords',
+                    'four of swords',
+                    'five of swords',
+                    'six of swords',
+                    'seven of swords',
+                    'eight of swords',
+                    'nine of swords',
+                    'ten of swords',
+                    'page of swords',
+                    'queen of swords',
+                    'king of swords',
+                    'ace of pentacles',
+                    'two of pentacles',
+                    'three of pentacles',
+                    'four of pentacles',
+                    'five of pentacles',
+                    'six of pentacles',
+                    'seven of pentacles',
+                    'eight of pentacles',
+                    'nine of pentacles',
+                    'ten of pentacles',
+                    'page of pentacles',
+                    'queen of pentacles',
+                    'king of pentacles',
+                    'ace of wands',
+                    'two of wands',
+                    'three of wands',
+                    'four of wands',
+                    'five of wands',
+                    'six of wands',
+                    'seven of wands',
+                    'eight of wands',
+                    'nine of wands',
+                    'ten of wands',
+                    'page of wands',
+                    'queen of wands',
+                    'king of wands'
+                    ]
 
 with sidebar:
     st.title('Select cards')
-    # add_selectbox = st.selectbox(
-    #     "How would you like to be contacted?",
-    #     ("Email", "Home phone", "Mobile phone"))
-    ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
+    # ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
     CARD1 = st.selectbox('CARD 1:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     CARD2 = st.selectbox('CARD 2:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     # CARD2 = st.selectbox('CARD 1:', card_list)
-    CARD3 = st.selectbox('CARD 3:', list(card_list))
+    CARD3 = st.selectbox('CARD 3:', list(major_arcana + minor_arcana))
     # option = st.selectbox(
     #      'How would you like to be contacted?',
     #      ('Email', 'Home phone', 'Mobile phone'))
 
-    selected = option_menu("Main Menu", ["Home", 'Settings'],
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
+    # selected = option_menu("Main Menu", ["Home", 'Settings'],
+    #     icons=['house', 'gear'], menu_icon="cast", default_index=1)
+    # selected
 
 # with test:
 #     st.title('Select Spread')
@@ -114,8 +165,10 @@ with dataset:
     st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
     st.text('The three card spread can represent several different meanings including:')
     st.subheader('[Past, Present, Future]')
-    st.text('[Mind, Body, Soul]')
-    st.text('[Background, Problem, Advice]')
+    st.subheader('[Mind, Body, Soul]')
+    st.subheader('[Background, Problem, Advice]')
+
+
 #     st.header("Stock Market Data For: '{}'".format(ticker))
 #     st.text('Data visualization constructed with Bokeh, from hourly intraday stock data')
 #     g1_col, g2_col = st.beta_columns(2)
@@ -143,18 +196,12 @@ with col3:
     st.image("https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg")
     st.text('Upright Magician: As a master manifestor, the Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. This is alchemy at its best!Now is the perfect time to move forward on an idea that you recently conceived. The seed of potential has sprouted, and you are being called to take action and bring your intention to fruition. The skills, knowledge and capabilities you have gathered along your life path have led you to where you are now, and whether or not you know it, you are ready to turn your ideas into reality.In your quest to manifest your goals, you must establish a clear vision of what you will create (and why) before you act. It is not enough to be motivated by ego (money, status, or fame) – you need to have a soul connection to your goals and intentions. You are a powerful, creative being, and this is your opportunity to bring your Higher Self in alignment with your day-to-day actions to create the future you want most.When you are clear about your ‘what’ and your ‘why’, the Magician calls on you to take inspired action. You will need focused attention and intense concentration to bring your goals to fruition. Focus on the ONE thing that will move you towards your goal. Commitment to the task is essential, so drop any distractions that may draw your focus away from what you want to achieve. Be methodical in your planning to make sure that you stay on track and carry out your tasks.')
 
-    # c1 = st.image('https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg')
-    # c2 = st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg')
-    # c3 = st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg')
 
     #
 #####st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
     # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
     # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
-
-    # Space out the maps so the first one is 2x the size of the other three
-    # c1, c2, c3 = st.beta_columns((1, 1, 1))
 
 
 # https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg
