@@ -17,10 +17,10 @@ ts = TimeSeries(key, output_format='pandas')
 # Use the full page instead of a narrow central column
 st.set_page_config(layout="wide")
 
-header = st.beta_container()
-dataset = st.beta_container()
-# features = st.beta_container()
-sidebar = st.sidebar.beta_container()
+header = st.container()
+dataset = st.container()
+# features = st.container()
+sidebar = st.sidebar.container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
@@ -76,10 +76,10 @@ with dataset:
 #     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
 #     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
-#     st.bokeh_chart(p, use_beta_container_width=True)
+#     st.bokeh_chart(p, use_container_width=True)
 
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 # col1, col2, col3 = st.beta_columns((1,1,0.5))) also works
 
 with col1:
