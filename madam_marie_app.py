@@ -9,10 +9,10 @@ from bokeh.plotting import figure, show
 ################################ GET DATA ######################################
 
 # for local deployment
-# project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
-# load_dotenv(os.path.join(project_folder,'.env'))
-# key = os.getenv("API_KEY")
-# ts = TimeSeries(key, output_format='pandas')
+project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
+load_dotenv(os.path.join(project_folder,'.env'))
+key = os.getenv("API_KEY")
+ts = TimeSeries(key, output_format='pandas')
 
 
 # for streamlit sharing deployment
