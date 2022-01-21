@@ -21,7 +21,7 @@ ts = TimeSeries(key, output_format='pandas')
 st.set_page_config(layout="wide")
 
 header = st.container()
-dataset = st.container()
+body = st.container()
 # features = st.container()
 sidebar = st.sidebar.container()
 
@@ -29,10 +29,10 @@ with header:
     st.title('Fortune Teller Tarot Reader')
     img = Image.open("banner_image.jpg")
     st.image(img)
-    st.text('- Data scraped from BiddyTarot.com')
+    st.text('- Card descriptions scraped from BiddyTarot.com')
     # st.text('')
     st.text('- App deployed using Heroku')
-
+    st.text('- Tarot card images taken from Wikimedia')
 
 major_arcana = [
              "Fool",
@@ -117,34 +117,20 @@ minor_arcana = [
 with sidebar:
     st.title('Select cards')
     # ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
-    CARD1 = st.selectbox('CARD 1:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
-    CARD2 = st.selectbox('CARD 2:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
+    CARD1 = st.selectbox('CARD 1:', list(major_arcana + minor_arcana))
+    # ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
+    CARD2 = st.selectbox('CARD 2:', list(major_arcana + minor_arcana))
     # CARD2 = st.selectbox('CARD 1:', card_list)
     CARD3 = st.selectbox('CARD 3:', list(major_arcana + minor_arcana))
-    # option = st.selectbox(
-    #      'How would you like to be contacted?',
-    #      ('Email', 'Home phone', 'Mobile phone'))
-
-    # selected = option_menu("Main Menu", ["Home", 'Settings'],
-    #     icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    # selected
 
 # with test:
 #     st.title('Select Spread')
-#     # st.text("Type the name of a stock ticker")
-#     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
-#     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
-    # display1 = ('Major','Minor')
 
 # #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
 #     options1 = list(range(len(display1)))
 #     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
 #     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
 #     MONTH = monthh+1
-    # st.selectbox(label='Card 1', options1 = ('Major','Minor'))
-    # st.selectbox(label='Card 1', options1 = display1)
-    # st.selectbox(label='Card 2', options2 = display1)
-    # st.selectbox(label='Card 3', options3 = display1)
 
 #     cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
 #     data.columns = cols
@@ -160,9 +146,8 @@ with sidebar:
 #     US_daily_market = US_daily_market.loc[(US_daily_market['month'] == int(MONTH)) & (US_daily_market['year'] == int(YEAR))]
 
 
-with dataset:
+with body:
     st.header("Three Tarot Spread")
-    st.text('Tarot card images taken from Wikimedia, and descriptions scraped from BiddyTarot.com')
     st.text('The three card spread can represent several different meanings including:')
     st.subheader('[Past, Present, Future]')
     st.subheader('[Mind, Body, Soul]')
@@ -182,7 +167,7 @@ col1, col2, col3 = st.columns([1, 1, 1])
 # col1, col2, col3 = st.beta_columns((1,1,0.5))) also works
 
 with col1:
-    st.header("Moon")
+    st.header("{}".format(CARD1))
     st.image("https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg")
     st.text("The Moon represents your fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past experiences. You may have a painful memory that caused emotional distress, and rather than dealing with the emotions you pushed them down deep into your subconscious. Now, these emotions are making a reappearance, and you may find yourself under their influence on a conscious or subconscious level. For example, if you had a car accident when you were young but didn’t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious mind and release any fears or anxieties holding you back. Hypnosis, therapy and shamanic healing can support this process. The Moon can indicate a time of uncertainty and illusion, when nothing is what it seems. Be careful of making fast decisions when The Moon appears because you may later realize you only had half the information you needed. You need to listen to and trust your intuition so you can see beyond what is in front of you. Feel into situations rather than thinking what they mean. Let go of your conscious mental blocks or negative self-talk and allow your intuition to guide you. Your dreams, intuitions and inner guidance lead you forward toward higher levels of understanding if you listen and use your judgement to help interpret the messages of the subconscious. When The Moon card appears in your Tarot reading, pay close attention to the lunar cycles and attune to its divine power using ritual, visualization or Tarot readings. Connect with the divine feminine and uncover deep intuitive insights and visions of what lies beyond everyday life. On the New Moon, set your intentions and plant the seeds of opportunity so they can grow. And on the Full Moon, honor your achievements and look at what you need to release so that new aspects of yourself can shine.")
 
