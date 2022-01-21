@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from alpha_vantage.timeseries import TimeSeries
 import pandas_bokeh
 from bokeh.plotting import figure, show
+from PIL import Image
 
 ################################ GET DATA ######################################
 
