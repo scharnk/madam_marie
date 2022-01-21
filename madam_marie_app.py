@@ -37,9 +37,9 @@ with sidebar:
         "How would you like to be contacted?",
         ("Email", "Home phone", "Mobile phone"))
 
-    option = st.selectbox(
-         'How would you like to be contacted?',
-         ('Email', 'Home phone', 'Mobile phone'))
+    # option = st.selectbox(
+    #      'How would you like to be contacted?',
+    #      ('Email', 'Home phone', 'Mobile phone'))
 
 
 
@@ -48,7 +48,7 @@ with sidebar:
 #     # st.text("Type the name of a stock ticker")
 #     ticker = st.text_input("(i.e. 'AARP', 'AMZN', 'MSFT', 'GOOG', etc.)", 'GOOG')
 #     data, meta = ts.get_daily_adjusted(ticker, outputsize='full')
-    display1 = ('Major','Minor')
+    # display1 = ('Major','Minor')
 
 # #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
 #     options1 = list(range(len(display1)))
