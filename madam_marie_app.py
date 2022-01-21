@@ -8,19 +8,33 @@ from bokeh.plotting import figure, show
 
 ################################ GET DATA ######################################
 
-project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
-load_dotenv(os.path.join(project_folder,'.env'))
-key = os.getenv("API_KEY")
+# for local deployment
+# project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
+# load_dotenv(os.path.join(project_folder,'.env'))
+# key = os.getenv("API_KEY")
+# ts = TimeSeries(key, output_format='pandas')
+
+
+# for streamlit sharing deployment
+key = st.secrets["API_KEY"]
+st.write(
+    "Has environment variable been set?:",
+    os.environ["API_KEY"] == st.secrets["API_KEY"])
+# key = st.secrets.API_KEY
 ts = TimeSeries(key, output_format='pandas')
+
+
+# streamlit secrets management url:
+# https://www.notion.so/Secrets-Management-730c82af2fc048d383d668c4049fb9bf
 
 ############################### STREAMLIT ######################################
 # Use the full page instead of a narrow central column
 st.set_page_config(layout="wide")
 
-header = st.container()
-dataset = st.container()
-# features = st.container()
-sidebar = st.sidebar.container()
+header = st.beta_container()
+dataset = st.beta_container()
+# features = st.beta_container()
+sidebar = st.sidebar.beta_container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
@@ -76,7 +90,7 @@ with dataset:
 #     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
 #     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
-#     st.bokeh_chart(p, use_container_width=True)
+#     st.bokeh_chart(p, use_beta_container_width=True)
 
 
 col1, col2, col3 = st.beta_columns(3)
