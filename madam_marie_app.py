@@ -17,10 +17,10 @@ ts = TimeSeries(key, output_format='pandas')
 # Use the full page instead of a narrow central column
 st.set_page_config(layout="wide")
 
-header = st.beta_container()
-dataset = st.beta_container()
-# features = st.beta_container()
-sidebar = st.sidebar.beta_container()
+header = st.container()
+dataset = st.container()
+# features = st.container()
+sidebar = st.sidebar.container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
