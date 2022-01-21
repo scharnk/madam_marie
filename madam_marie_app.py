@@ -64,9 +64,9 @@ with sidebar:
     #     "How would you like to be contacted?",
     #     ("Email", "Home phone", "Mobile phone"))
     CARD1 = st.selectbox('CARD 1:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
-    CARD2 = st.selectbox('CARD 2:', list(card_list), format_func=lambda x: display1[x])
+    CARD2 = st.selectbox('CARD 2:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     # CARD2 = st.selectbox('CARD 1:', card_list)
-    # CARD3 = st.selectbox('CARD 1:', card_list)
+    CARD3 = st.selectbox('CARD 3:', list(card_list))
     # option = st.selectbox(
     #      'How would you like to be contacted?',
     #      ('Email', 'Home phone', 'Mobile phone'))
