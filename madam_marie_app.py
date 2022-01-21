@@ -30,7 +30,6 @@ with header:
     img = Image.open("banner_image.jpg")
     st.image(img)
     st.text('- Card descriptions scraped from BiddyTarot.com')
-    # st.text('')
     st.text('- App deployed using Heroku')
     st.text('- Tarot card images taken from Wikimedia')
 
@@ -60,58 +59,58 @@ major_arcana = [
              ]
 
 minor_arcana = [
-                    'ace of cups',
-                    'two of cups',
-                    'three of cups',
-                    'four of cups',
-                    'five of cups',
-                    'six of cups',
-                    'seven of cups',
-                    'eight of cups',
-                    'nine of cups',
-                    'ten of cups',
-                    'page of cups',
-                    'queen of cups',
-                    'king of cups',
-                    'ace of swords',
-                    'two of swords',
-                    'three of swords',
-                    'four of swords',
-                    'five of swords',
-                    'six of swords',
-                    'seven of swords',
-                    'eight of swords',
-                    'nine of swords',
-                    'ten of swords',
-                    'page of swords',
-                    'queen of swords',
-                    'king of swords',
-                    'ace of pentacles',
-                    'two of pentacles',
-                    'three of pentacles',
-                    'four of pentacles',
-                    'five of pentacles',
-                    'six of pentacles',
-                    'seven of pentacles',
-                    'eight of pentacles',
-                    'nine of pentacles',
-                    'ten of pentacles',
-                    'page of pentacles',
-                    'queen of pentacles',
-                    'king of pentacles',
-                    'ace of wands',
-                    'two of wands',
-                    'three of wands',
-                    'four of wands',
-                    'five of wands',
-                    'six of wands',
-                    'seven of wands',
-                    'eight of wands',
-                    'nine of wands',
-                    'ten of wands',
-                    'page of wands',
-                    'queen of wands',
-                    'king of wands'
+                    'Ace of Cups',
+                    'Two of Cups',
+                    'Three of Cups',
+                    'Four of Cups',
+                    'Five of Cups',
+                    'Six of Cups',
+                    'Seven of Cups',
+                    'Eight of Cups',
+                    'Nine of Cups',
+                    'Ten of Cups',
+                    'Page of Cups',
+                    'Queen of Cups',
+                    'King of Cups',
+                    'Ace of Swords',
+                    'Two of Swords',
+                    'Three of Swords',
+                    'Four of Swords',
+                    'Five of Swords',
+                    'Six of Swords',
+                    'Seven of Swords',
+                    'Eight of Swords',
+                    'Nine of Swords',
+                    'Ten of Swords',
+                    'Page of Swords',
+                    'Queen of Swords',
+                    'King of Swords',
+                    'Ace of Pentacles',
+                    'Two of Pentacles',
+                    'Three of Pentacles',
+                    'Four of Pentacles',
+                    'Five of Pentacles',
+                    'Six of Pentacles',
+                    'Seven of Pentacles',
+                    'Eight of Pentacles',
+                    'Nine of Pentacles',
+                    'Ten of Pentacles',
+                    'Page of Pentacles',
+                    'Queen of Pentacles',
+                    'King of Pentacles',
+                    'Ace of Wands',
+                    'Two of Wands',
+                    'Three of Wands',
+                    'Four of Wands',
+                    'Five of Wands',
+                    'Six of Wands',
+                    'Seven of Wands',
+                    'Eight of Wands',
+                    'Nine of Wands',
+                    'Ten of Wands',
+                    'Page of Wands',
+                    'Queen of Wands',
+                    'King of Wands'
                     ]
 
 with sidebar:
@@ -148,15 +147,12 @@ with sidebar:
 
 with body:
     st.header("Three Tarot Spread")
-    st.text('The three card spread can represent several different meanings including:')
+    st.text('Three card spreads can represent several different meanings, including:')
     st.subheader('[Past, Present, Future]')
     st.subheader('[Mind, Body, Soul]')
     st.subheader('[Background, Problem, Advice]')
 
 
-#     st.header("Stock Market Data For: '{}'".format(ticker))
-#     st.text('Data visualization constructed with Bokeh, from hourly intraday stock data')
-#     g1_col, g2_col = st.beta_columns(2)
 #     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
 #     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
 #     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
@@ -174,7 +170,7 @@ with col1:
 with col2:
     st.header("{}".format(CARD2))
     st.image("https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg")
-    st.text('Upright Ace of Wands: As an Ace, this Wands card brings you pure potential – this time in the spiritual, energetic realm. Ideas are flowing to you, motivating and inspiring you to pursue a new path. You are open to receiving new opportunities that align with your Higher Self. A whole world of possibility is available to you.The Ace of Wands encourages you to follow your heart and live your passion. If you feel a strong pull towards a new project or path, but are questioning whether it will work, then this card gives you a gentle nudge to pursue your passion. You can always start out small, treating the project or idea as an experiment or trial. Then, if it feels good, keep doing it; and if it doesn’t, make adjustments and try again. Let your energy, dedication and motivation be your guides.If you have been looking for a sign about whether this is the right project, then the Ace of Wands is a clear YES! The sprouting wand and the fertile landscape in the background are all positive indications that this idea has the potential to turn into something fulfilling and energising. Use your creative energy and passion to take the first steps. Even if you prefer to plan out everything before you begin down a particular path, the Ace of Wands wants you to listen to your instincts and follow your gut. If it seems like a good idea, it probably is. So, start with a few fundamentals to get things rolling, and then continue to grow and develop your ideas through more complex activities later on. The important thing is that you act now rather than spending more time planning or researching.Keep in mind, however, that the Aces represent potential but not guaranteed results. The Ace of Wands (or any Ace) is a seed that has yet to grow into something more substantial or sustainable. The opportunity on offer shows great promise, but it will be up to you to maximise it for the long term. See this card as the spark needed to fuel a massive fire, but remember that the flash itself is not enough to keep the flames burning.The Ace of Wands may appear when you have an opportunity to grow on a personal or spiritual level. You may be interested in taking a class or investing in a course so you can follow your creative spirit. For example, you might enrol in a photography class, a Tarot course, or a self-improvement program. Trust that this experience will open you up to even more possibilities.')
+    st.dataframe('Upright Ace of Wands: As an Ace, this Wands card brings you pure potential – this time in the spiritual, energetic realm. Ideas are flowing to you, motivating and inspiring you to pursue a new path. You are open to receiving new opportunities that align with your Higher Self. A whole world of possibility is available to you.The Ace of Wands encourages you to follow your heart and live your passion. If you feel a strong pull towards a new project or path, but are questioning whether it will work, then this card gives you a gentle nudge to pursue your passion. You can always start out small, treating the project or idea as an experiment or trial. Then, if it feels good, keep doing it; and if it doesn’t, make adjustments and try again. Let your energy, dedication and motivation be your guides.If you have been looking for a sign about whether this is the right project, then the Ace of Wands is a clear YES! The sprouting wand and the fertile landscape in the background are all positive indications that this idea has the potential to turn into something fulfilling and energising. Use your creative energy and passion to take the first steps. Even if you prefer to plan out everything before you begin down a particular path, the Ace of Wands wants you to listen to your instincts and follow your gut. If it seems like a good idea, it probably is. So, start with a few fundamentals to get things rolling, and then continue to grow and develop your ideas through more complex activities later on. The important thing is that you act now rather than spending more time planning or researching.Keep in mind, however, that the Aces represent potential but not guaranteed results. The Ace of Wands (or any Ace) is a seed that has yet to grow into something more substantial or sustainable. The opportunity on offer shows great promise, but it will be up to you to maximise it for the long term. See this card as the spark needed to fuel a massive fire, but remember that the flash itself is not enough to keep the flames burning.The Ace of Wands may appear when you have an opportunity to grow on a personal or spiritual level. You may be interested in taking a class or investing in a course so you can follow your creative spirit. For example, you might enrol in a photography class, a Tarot course, or a self-improvement program. Trust that this experience will open you up to even more possibilities.')
 
 with col3:
     st.header("{}".format(CARD3))
@@ -182,8 +178,7 @@ with col3:
     st.text('Upright Magician: As a master manifestor, the Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. This is alchemy at its best!Now is the perfect time to move forward on an idea that you recently conceived. The seed of potential has sprouted, and you are being called to take action and bring your intention to fruition. The skills, knowledge and capabilities you have gathered along your life path have led you to where you are now, and whether or not you know it, you are ready to turn your ideas into reality.In your quest to manifest your goals, you must establish a clear vision of what you will create (and why) before you act. It is not enough to be motivated by ego (money, status, or fame) – you need to have a soul connection to your goals and intentions. You are a powerful, creative being, and this is your opportunity to bring your Higher Self in alignment with your day-to-day actions to create the future you want most.When you are clear about your ‘what’ and your ‘why’, the Magician calls on you to take inspired action. You will need focused attention and intense concentration to bring your goals to fruition. Focus on the ONE thing that will move you towards your goal. Commitment to the task is essential, so drop any distractions that may draw your focus away from what you want to achieve. Be methodical in your planning to make sure that you stay on track and carry out your tasks.')
 
 
-    #
-#####st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
+    # st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
     # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
     # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
