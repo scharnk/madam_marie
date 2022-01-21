@@ -44,8 +44,8 @@ with sidebar:
 #     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
 #     MONTH = monthh+1
     st.selectbox(label='Card 1', options1 = display1)
-    st.selectbox(label='Card 2', options2 = )
-    st.selectbox(label='Card 3', options3 = )
+    st.selectbox(label='Card 2', options2 = display1)
+    st.selectbox(label='Card 3', options3 = display1)
 #     cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
 #     data.columns = cols
 #     data['day'] = data.index.date
