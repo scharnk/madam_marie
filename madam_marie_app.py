@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 import pandas as pd
 import os
 from dotenv import load_dotenv
@@ -65,6 +65,7 @@ with sidebar:
     # add_selectbox = st.selectbox(
     #     "How would you like to be contacted?",
     #     ("Email", "Home phone", "Mobile phone"))
+    ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
     CARD1 = st.selectbox('CARD 1:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     CARD2 = st.selectbox('CARD 2:', ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     # CARD2 = st.selectbox('CARD 1:', card_list)
