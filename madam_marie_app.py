@@ -8,24 +8,10 @@ from bokeh.plotting import figure, show
 
 ################################ GET DATA ######################################
 
-# for local deployment
 project_folder = os.path.expanduser('~/code/GitHub/madam_marie')
 load_dotenv(os.path.join(project_folder,'.env'))
 key = os.getenv("API_KEY")
 ts = TimeSeries(key, output_format='pandas')
-
-
-# for streamlit sharing deployment
-key = st.secrets["API_KEY"]
-st.write(
-    "Has environment variable been set?:",
-    os.environ["API_KEY"] == st.secrets["API_KEY"])
-# key = st.secrets.API_KEY
-ts = TimeSeries(key, output_format='pandas')
-
-
-# streamlit secrets management url:
-# https://www.notion.so/Secrets-Management-730c82af2fc048d383d668c4049fb9bf
 
 ############################### STREAMLIT ######################################
 # Use the full page instead of a narrow central column
