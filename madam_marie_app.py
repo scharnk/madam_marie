@@ -113,6 +113,95 @@ minor_arcana = [
                     'King of Wands'
                     ]
 
+major_arcana_image_links = [
+'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/340px-RWS_Tarot_00_Fool.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/RWS_Tarot_01_Magician.jpg/340px-RWS_Tarot_01_Magician.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/440px-RWS_Tarot_02_High_Priestess.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/3a/TheLovers.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RWS_Tarot_19_Sun.jpg/370px-RWS_Tarot_19_Sun.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg'
+]
+
+minor_arcana_image_links = [
+# cups, swords, pentacles, wands
+# cups
+'https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/a/ad/Cups11.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg',
+# swords
+'https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords10.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg',
+# pentacles
+'https://upload.wikimedia.org/wikipedia/commons/f/fd/Pents01.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/9/9f/Pents02.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/35/Pents04.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/9/96/Pents05.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/a/a6/Pents06.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/6/6a/Pents07.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/f0/Pents09.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/42/Pents10.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/e/ec/Pents11.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/d/d5/Pents12.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/8/88/Pents13.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg',
+# wands
+'https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/4/4d/Tarot_Nine_of_Wands.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg'
+]
+
 with sidebar:
     st.title('Select cards')
     # ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
@@ -164,7 +253,8 @@ col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
     st.header("{}".format(CARD1))
-    st.image("https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg")
+    st.image(major_arcana_image_links[0])
+    # st.image("https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg")
     st.markdown("The Moon represents your fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past experiences. You may have a painful memory that caused emotional distress, and rather than dealing with the emotions you pushed them down deep into your subconscious. Now, these emotions are making a reappearance, and you may find yourself under their influence on a conscious or subconscious level. For example, if you had a car accident when you were young but didn’t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious mind and release any fears or anxieties holding you back. Hypnosis, therapy and shamanic healing can support this process. The Moon can indicate a time of uncertainty and illusion, when nothing is what it seems. Be careful of making fast decisions when The Moon appears because you may later realize you only had half the information you needed. You need to listen to and trust your intuition so you can see beyond what is in front of you. Feel into situations rather than thinking what they mean. Let go of your conscious mental blocks or negative self-talk and allow your intuition to guide you. Your dreams, intuitions and inner guidance lead you forward toward higher levels of understanding if you listen and use your judgement to help interpret the messages of the subconscious. When The Moon card appears in your Tarot reading, pay close attention to the lunar cycles and attune to its divine power using ritual, visualization or Tarot readings. Connect with the divine feminine and uncover deep intuitive insights and visions of what lies beyond everyday life. On the New Moon, set your intentions and plant the seeds of opportunity so they can grow. And on the Full Moon, honor your achievements and look at what you need to release so that new aspects of yourself can shine.")
 
 with col2:
@@ -189,6 +279,18 @@ with col3:
 # https://en.m.wikipedia.org/wiki/Ace_of_Wands_(Tarot_card)#/media/File%3AWands01.jpg
 # https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg
 # https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg
+
+################################################################################
+# NEXT STEPS:
+
+# get list of links for images
+# make dictionary of key value pairs
+#   KEY: name of card
+#   VALUES: upright and reversed keywords,
+#       upright and reversed meanings,
+#       link to images
+
+
 ################################################################################
 # useful links:
 #
