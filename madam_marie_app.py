@@ -27,7 +27,7 @@ sidebar = st.sidebar.container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
-    img = Image.open("banner_image.jpg")
+    img = Image.open("banner_image_cropped.jpg")
     st.image(img)
     st.text('- Card descriptions scraped from BiddyTarot.com')
     st.text('- App deployed using Heroku')
