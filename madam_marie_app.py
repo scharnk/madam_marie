@@ -243,9 +243,10 @@ with sidebar:
 with body:
     st.header("Three Tarot Spread")
     st.text('Three card spreads can represent several different meanings, including:')
+    # st.subheader('')
     st.caption('[Past, Present, Future]')
-    st.subheader('[Mind, Body, Soul]')
-    st.subheader('[Background, Problem, Advice]')
+    st.caption('[Mind, Body, Soul]')
+    st.caption('[Background, Problem, Advice]')
 
 
 #     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
