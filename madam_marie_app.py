@@ -58,7 +58,6 @@ arcana = [
              "Judgement",
              "World",
 #              ]
-#
 # minor_arcana = [
                     'Ace of Cups',
                     'Two of Cups',
@@ -71,6 +70,7 @@ arcana = [
                     'Nine of Cups',
                     'Ten of Cups',
                     'Page of Cups',
+                    'Knight of Cups',
                     'Queen of Cups',
                     'King of Cups',
                     'Ace of Swords',
@@ -84,6 +84,7 @@ arcana = [
                     'Nine of Swords',
                     'Ten of Swords',
                     'Page of Swords',
+                    'Knight of Swords',
                     'Queen of Swords',
                     'King of Swords',
                     'Ace of Pentacles',
@@ -97,6 +98,7 @@ arcana = [
                     'Nine of Pentacles',
                     'Ten of Pentacles',
                     'Page of Pentacles',
+                    'Knight of Pentacles',
                     'Queen of Pentacles',
                     'King of Pentacles',
                     'Ace of Wands',
@@ -110,6 +112,7 @@ arcana = [
                     'Nine of Wands',
                     'Ten of Wands',
                     'Page of Wands',
+                    'Knight of Wands',
                     'Queen of Wands',
                     'King of Wands'
                     ]
