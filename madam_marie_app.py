@@ -276,7 +276,7 @@ col1, col2, col3 = st.columns([1, 1, 1])
 with col1:
     st.header("{}".format(CARD1))
     st.image(arcana_dict["{}".format(CARD1)])
-    st.markdown("{}".format())
+    # st.markdown("{}".format())
 
     with st.expander("Upright Meaning"):
          st.write("""
