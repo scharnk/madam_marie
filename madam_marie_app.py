@@ -204,78 +204,87 @@ arcana_image_links = [
 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg'
 ]
 
+arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a free spirit',
+  ' The Fool Reversed: Holding back, recklessness, risk-taking   '],
+ ['    The Magician Upright: Manifestation, resourcefulness, power, inspired action',
+  ' The Magician Reversed: Manipulation, poor planning, untapped talents   '],
+ ['    The High Priestess Upright: Intuition, sacred knowledge, divine feminine, the subconscious mind',
+  ' The High Priestess Reversed: Secrets, disconnected from intuition, withdrawal and silence   '],
+ ['    The Empress Upright: Femininity, beauty, nature, nurturing, abundance',
+  ' The Empress Reversed: Creative block, dependence on others   '],
+ ['    The Emperor Upright: Authority, establishment, structure, a father figure',
+  ' The Emperor Reversed: Domination, excessive control, lack of discipline, inflexibility   '],
+ ['    The Hierophant Upright: Spiritual wisdom, religious beliefs, conformity, tradition,institutions',
+  ' The Hierophant Reversed: Personal beliefs, freedom, challenging the status quo   '],
+ ['    The Lovers Upright: Love, harmony, relationships, values alignment, choices',
+  ' The Lovers Reversed: Self-love, disharmony, imbalance, misalignment of values   '],
+ ['    The Chariot Upright: Control, willpower, success, action, determination',
+  ' The Chariot Reversed: Self-discipline, opposition, lack of directionThe Chariot   '],
+ ['    Strength Upright: Strength, courage, persuasion, influence, compassion',
+  ' Strength Reversed: Inner strength, self-doubt, low energy, raw emotion   '],
+ ['    The Hermit Upright: Soul-searching, introspection, being alone, inner guidance',
+  ' The Hermit Reversed: Isolation, loneliness, withdrawal   '],
+ ['    Wheel of Fortune Upright: Good luck, karma, life cycles, destiny, a turning point',
+  ' Wheel of Fortune Reversed: Bad luck, resistance to change, breaking cycles   '],
+ ['    Justice Upright: Justice, fairness, truth, cause and effect, law',
+  ' Justice Reversed: Unfairness, lack of accountability, dishonestyJustice   '],
+ ['    The Hanged Man Upright: Pause, surrender, letting go, new perspectives',
+  ' The Hanged Man Reversed: Delays, resistance, stalling, indecision   '],
+ ['    Death Upright: Endings, change, transformation, transition',
+  ' Death Reversed: Resistance to change, personal transformation, inner purging   '],
+ ['    Temperance Upright: Balance, moderation, patience, purpose',
+  ' Temperance Reversed: Imbalance, excess, self-healing, re-alignment   '],
+ ['    The Devil Upright: Shadow self, attachment, addiction, restriction, sexuality',
+  ' The Devil Reversed: Releasing limiting beliefs, exploring dark thoughts, detachment   '],
+ ['    The Tower Upright: Sudden change, upheaval, chaos, revelation, awakening',
+  ' The Tower Reversed: Personal transformation, fear of change, averting disaster   '],
+ ['    The Star Upright: Hope, faith, purpose, renewal, spirituality',
+  ' The Star Reversed: Lack of faith, despair, self-trust, disconnection   '],
+ ['    The Moon Upright: Illusion, fear, anxiety, subconscious, intuition',
+  ' The Moon Reversed: Release of fear, repressed emotion, inner confusion   '],
+ ['    The Sun Upright: Positivity, fun, warmth, success, vitality',
+  ' The Sun Reversed: Inner child, feeling down, overly optimistic   '],
+ ['    Judgement Upright: Judgement, rebirth, inner calling, absolution',
+  ' Judgement Reversed: Self-doubt, inner critic, ignoring the call   '],
+ ['    The World Upright: Completion, integration, accomplishment, travel',
+  ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
+
 arcana_dict = dict(zip(arcana, arcana_image_links))
 # minor_arcana_dict = dict(zip(minor_arcana, minor_arcana_image_links))
 
 with sidebar:
     st.title('Select cards')
-    # ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
-    # CARD1_orientation = st.selectbox('CARD 1:', ['Upright','Reversed'])
-    CARD1 = st.selectbox('CARD 1', list(arcana))
 
     # list(major_arcana + minor_arcana))
     # ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
-    # CARD2_orientation = st.selectbox('CARD 2 ORIENTATION:', ['Upright','Reversed'])
+    CARD1 = st.selectbox('CARD 1', list(arcana))
     CARD2 = st.selectbox('CARD 2:', list(arcana))
-
-    # CARD2 = st.selectbox('CARD 1:', card_list)
-    # CARD3_orientation = st.selectbox('CARD 3 ORIENTATION:', ['Upright','Reversed'])
     CARD3 = st.selectbox('CARD 3:', list(arcana))
-
-# with test:
-#     st.title('Select Spread')
-
-# #     display1 = ('January','February','March','April','May','June','July','August','September','October','November','December')
-#     options1 = list(range(len(display1)))
-#     YEAR = st.selectbox('YEAR:', ['2021','2020','2019','2018','2017','2016','2015'])
-#     monthh = st.selectbox('MONTH:', options1, format_func=lambda x: display1[x])
-#     MONTH = monthh+1
-
-#     cols = ['open','high','low','close','adj_close','volume','divedend','split_coeff']
-#     data.columns = cols
-#     data['day'] = data.index.date
-#     data['time'] = data.index.time
-
-#     US_daily_market = data
-#     US_daily_market.index = pd.to_datetime(US_daily_market.index, format='%Y-%m-%d')
-
-#     US_daily_market['month'] = US_daily_market.index.month
-#     US_daily_market['year'] = US_daily_market.index.year
-#     US_daily_market = US_daily_market.reset_index()
-#     US_daily_market = US_daily_market.loc[(US_daily_market['month'] == int(MONTH)) & (US_daily_market['year'] == int(YEAR))]
 
 
 with body:
     st.subheader("The Three Tarot Spread")
     st.text('- Three card tarot spreads can be used to represent several different meanings, including:')
     # st.subheader('')
-    st.caption('[Past, Present, Future]')
-    st.caption('[Mind, Body, Soul]')
-    st.caption('[Background, Problem, Advice]')
-
-
-#     p = figure(title="The Highs and Lows of: '{}'".format(ticker), x_axis_type='datetime', x_axis_label='Date', y_axis_label='Value (USD)')
-#     p.line(date, y, legend_label="Max / day (USD)", line_width=2)
-#     p.line(date, x, color= "red", legend_label="Min / day (USD)", line_width=2)
-#     st.bokeh_chart(p, use_container_width=True)
+    st.caption('- [Past, Present, Future]')
+    st.caption('- [Mind, Body, Soul]')
+    st.caption('- [Background, Problem, Advice]')
 
 
 col1, col2, col3 = st.columns([1, 1, 1])
-# col1, col2, col3 = st.beta_columns((1,1,0.5))) also works
 
 with col1:
     st.header("{}".format(CARD1))
     st.image(arcana_dict["{}".format(CARD1)])
-    # st.image("https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg")
-    st.markdown("The Moon represents your fears and illusions and often comes out when you are projecting fear into your present and your future, based on your past experiences. You may have a painful memory that caused emotional distress, and rather than dealing with the emotions you pushed them down deep into your subconscious. Now, these emotions are making a reappearance, and you may find yourself under their influence on a conscious or subconscious level. For example, if you had a car accident when you were young but didn’t deal with the emotions, you may get sad or anxious every time you get into the backseat of a car. To remedy this, connect with your subconscious mind and release any fears or anxieties holding you back. Hypnosis, therapy and shamanic healing can support this process. The Moon can indicate a time of uncertainty and illusion, when nothing is what it seems. Be careful of making fast decisions when The Moon appears because you may later realize you only had half the information you needed. You need to listen to and trust your intuition so you can see beyond what is in front of you. Feel into situations rather than thinking what they mean. Let go of your conscious mental blocks or negative self-talk and allow your intuition to guide you. Your dreams, intuitions and inner guidance lead you forward toward higher levels of understanding if you listen and use your judgement to help interpret the messages of the subconscious. When The Moon card appears in your Tarot reading, pay close attention to the lunar cycles and attune to its divine power using ritual, visualization or Tarot readings. Connect with the divine feminine and uncover deep intuitive insights and visions of what lies beyond everyday life. On the New Moon, set your intentions and plant the seeds of opportunity so they can grow. And on the Full Moon, honor your achievements and look at what you need to release so that new aspects of yourself can shine.")
+    st.markdown("{}".format())
 
     with st.expander("Upright Meaning"):
          st.write("""
-
+            PLACEHOLDER
          """)
     with st.expander("Reversed Meaning"):
          st.write("""
-
+            PLACEHOLDER
          """)
 
 
@@ -283,15 +292,15 @@ with col2:
     st.header("{}".format(CARD2))
     st.image(arcana_dict["{}".format(CARD2)])
     # st.image("https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg")
-    st.write('Upright Ace of Wands: As an Ace, this Wands card brings you pure potential – this time in the spiritual, energetic realm. Ideas are flowing to you, motivating and inspiring you to pursue a new path. You are open to receiving new opportunities that align with your Higher Self. A whole world of possibility is available to you.The Ace of Wands encourages you to follow your heart and live your passion. If you feel a strong pull towards a new project or path, but are questioning whether it will work, then this card gives you a gentle nudge to pursue your passion. You can always start out small, treating the project or idea as an experiment or trial. Then, if it feels good, keep doing it; and if it doesn’t, make adjustments and try again. Let your energy, dedication and motivation be your guides.If you have been looking for a sign about whether this is the right project, then the Ace of Wands is a clear YES! The sprouting wand and the fertile landscape in the background are all positive indications that this idea has the potential to turn into something fulfilling and energising. Use your creative energy and passion to take the first steps. Even if you prefer to plan out everything before you begin down a particular path, the Ace of Wands wants you to listen to your instincts and follow your gut. If it seems like a good idea, it probably is. So, start with a few fundamentals to get things rolling, and then continue to grow and develop your ideas through more complex activities later on. The important thing is that you act now rather than spending more time planning or researching.Keep in mind, however, that the Aces represent potential but not guaranteed results. The Ace of Wands (or any Ace) is a seed that has yet to grow into something more substantial or sustainable. The opportunity on offer shows great promise, but it will be up to you to maximise it for the long term. See this card as the spark needed to fuel a massive fire, but remember that the flash itself is not enough to keep the flames burning.The Ace of Wands may appear when you have an opportunity to grow on a personal or spiritual level. You may be interested in taking a class or investing in a course so you can follow your creative spirit. For example, you might enrol in a photography class, a Tarot course, or a self-improvement program. Trust that this experience will open you up to even more possibilities.')
+    st.write('PLACEHOLDER')
 
     with st.expander("Upright Meaning"):
          st.write("""
-
+            PLACEHOLDER
          """)
     with st.expander("Reversed Meaning"):
          st.write("""
-
+            PLACEHOLDER
          """)
 
 with col3:
@@ -306,7 +315,7 @@ with col3:
          """)
     with st.expander("Reversed Meaning"):
          st.write("""
-
+            PLACEHOLDER
          """)
     # st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
     # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
