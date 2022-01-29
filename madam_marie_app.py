@@ -210,11 +210,14 @@ arcana_dict = dict(zip(arcana, arcana_image_links))
 with sidebar:
     st.title('Select cards')
     # ARCANE = st.selectbox('Arcana:', ['Major','Minor'])
+    CARD1_orientation = st.selectbox('CARD 1 ORIENTATION:', ['Upright','Reversed'])
     CARD1 = st.selectbox('CARD 1:', list(arcana))
     # list(major_arcana + minor_arcana))
     # ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
+    CARD2_orientation = st.selectbox('CARD 2 ORIENTATION:', ['Upright','Reversed'])
     CARD2 = st.selectbox('CARD 2:', list(arcana))
     # CARD2 = st.selectbox('CARD 1:', card_list)
+    CARD3_orientation = st.selectbox('CARD 3 ORIENTATION:', ['Upright','Reversed'])
     CARD3 = st.selectbox('CARD 3:', list(arcana))
 
 # with test:
@@ -241,8 +244,8 @@ with sidebar:
 
 
 with body:
-    st.header("Three Tarot Spread")
-    st.text('Three card spreads can represent several different meanings, including:')
+    st.subheader("The Three Tarot Spread")
+    st.text('- Three card tarot spreads can be used to represent several different meanings, including:')
     # st.subheader('')
     st.caption('[Past, Present, Future]')
     st.caption('[Mind, Body, Soul]')
