@@ -33,7 +33,30 @@ with header:
     st.text('- App deployed using Heroku')
     st.text('- Tarot card images taken from Wikimedia')
 
-# major_
+major_arcana = [
+             "Fool",
+             "The Magician",
+             "High Priestess",
+             "The Empress",
+             "The Emperor",
+             "Hierophant",
+             "Lovers",
+             "Chariot",
+             "Strength",
+             "Hermit",
+             "Wheel of Fortune",
+             "Justice",
+             "Hanged Man",
+             "Death",
+             "Temperance",
+             "Devil",
+             "Tower",
+             "Star",
+             "Moon",
+             "Sun",
+             "Judgement",
+             "World"]
+
 arcana = [
              "Fool",
              "The Magician",
@@ -250,6 +273,7 @@ arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a
   ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
 
 arcana_dict = dict(zip(arcana, arcana_image_links))
+major_arcana_dict = dict(zip(major_arcana, arcana_keywords))
 # minor_arcana_dict = dict(zip(minor_arcana, minor_arcana_image_links))
 
 with sidebar:
@@ -263,9 +287,8 @@ with sidebar:
 
 
 with body:
-    st.subheader("The Three Tarot Spread")
-    st.text('- Three card tarot spreads can be used to represent several different meanings, including:')
-    # st.subheader('')
+    st.subheader("The Three Card Tarot Spread")
+    st.text('Three card tarot spreads can be used to represent several different meanings, including:')
     st.caption('- [Past, Present, Future]')
     st.caption('- [Mind, Body, Soul]')
     st.caption('- [Background, Problem, Advice]')
@@ -277,6 +300,8 @@ with col1:
     st.header("{}".format(CARD1))
     st.image(arcana_dict["{}".format(CARD1)])
     # st.markdown("{}".format())
+    st.write(major_arcana_dict["{}".format(CARD1)][0])
+    st.write(major_arcana_dict["{}".format(CARD1)][1])
 
     with st.expander("Upright Meaning"):
          st.write("""
@@ -286,7 +311,6 @@ with col1:
          st.write("""
             PLACEHOLDER
          """)
-
 
 with col2:
     st.header("{}".format(CARD2))
@@ -322,7 +346,6 @@ with col3:
     # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
     # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
 
-
 # https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg
 # https://en.m.wikipedia.org/wiki/The_Magician_(Tarot_card)#/media/File%3ARWS_Tarot_01_Magician.jpg
 # https://en.m.wikipedia.org/wiki/Ace_of_Wands_(Tarot_card)#/media/File%3AWands01.jpg
@@ -332,7 +355,7 @@ with col3:
 ################################################################################
 # NEXT STEPS:
 
-# get list of links for images
+# get list of links for images - CHECK
 # make dictionary of key value pairs
 #   KEY: name of card
 #   VALUES: upright and reversed keywords,
@@ -343,12 +366,6 @@ with col3:
 ################################################################################
 # useful links:
 #
-# bokeh:
-#   https://www.youtube.com/watch?v=tnOgrlqA0Bc
-#   https://pythonforundergradengineers.com/streamlit-app-with-bokeh.html
-# alpha vantage:
-#   https://www.youtube.com/watch?v=WJ2t_LYb__0
 # streamlit:
 #   four part series, used first 2/3:
 #   https://www.youtube.com/watch?v=CSv2TBA9_2E
-#
