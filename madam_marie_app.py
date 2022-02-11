@@ -4,8 +4,8 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 from alpha_vantage.timeseries import TimeSeries
-import pandas_bokeh
-from bokeh.plotting import figure, show
+# import pandas_bokeh
+# from bokeh.plotting import figure, show
 from PIL import Image
 
 
@@ -30,7 +30,7 @@ with header:
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
     st.text('- Card descriptions scraped from BiddyTarot.com')
-    st.text('- App deployed using Heroku')
+    st.text('- Streamlit app deployed using Heroku')
     st.text('- Tarot card images taken from Wikimedia')
 
 major_arcana = [
@@ -80,65 +80,63 @@ arcana = [
              "Sun",
              "Judgement",
              "World",
-#              ]
-# minor_arcana = [
-                    'Ace of Cups',
-                    'Two of Cups',
-                    'Three of Cups',
-                    'Four of Cups',
-                    'Five of Cups',
-                    'Six of Cups',
-                    'Seven of Cups',
-                    'Eight of Cups',
-                    'Nine of Cups',
-                    'Ten of Cups',
-                    'Page of Cups',
-                    'Knight of Cups',
-                    'Queen of Cups',
-                    'King of Cups',
-                    'Ace of Swords',
-                    'Two of Swords',
-                    'Three of Swords',
-                    'Four of Swords',
-                    'Five of Swords',
-                    'Six of Swords',
-                    'Seven of Swords',
-                    'Eight of Swords',
-                    'Nine of Swords',
-                    'Ten of Swords',
-                    'Page of Swords',
-                    'Knight of Swords',
-                    'Queen of Swords',
-                    'King of Swords',
-                    'Ace of Pentacles',
-                    'Two of Pentacles',
-                    'Three of Pentacles',
-                    'Four of Pentacles',
-                    'Five of Pentacles',
-                    'Six of Pentacles',
-                    'Seven of Pentacles',
-                    'Eight of Pentacles',
-                    'Nine of Pentacles',
-                    'Ten of Pentacles',
-                    'Page of Pentacles',
-                    'Knight of Pentacles',
-                    'Queen of Pentacles',
-                    'King of Pentacles',
-                    'Ace of Wands',
-                    'Two of Wands',
-                    'Three of Wands',
-                    'Four of Wands',
-                    'Five of Wands',
-                    'Six of Wands',
-                    'Seven of Wands',
-                    'Eight of Wands',
-                    'Nine of Wands',
-                    'Ten of Wands',
-                    'Page of Wands',
-                    'Knight of Wands',
-                    'Queen of Wands',
-                    'King of Wands'
-                    ]
+            'Ace of Cups',
+            'Two of Cups',
+            'Three of Cups',
+            'Four of Cups',
+            'Five of Cups',
+            'Six of Cups',
+            'Seven of Cups',
+            'Eight of Cups',
+            'Nine of Cups',
+            'Ten of Cups',
+            'Page of Cups',
+            'Knight of Cups',
+            'Queen of Cups',
+            'King of Cups',
+            'Ace of Swords',
+            'Two of Swords',
+            'Three of Swords',
+            'Four of Swords',
+            'Five of Swords',
+            'Six of Swords',
+            'Seven of Swords',
+            'Eight of Swords',
+            'Nine of Swords',
+            'Ten of Swords',
+            'Page of Swords',
+            'Knight of Swords',
+            'Queen of Swords',
+            'King of Swords',
+            'Ace of Pentacles',
+            'Two of Pentacles',
+            'Three of Pentacles',
+            'Four of Pentacles',
+            'Five of Pentacles',
+            'Six of Pentacles',
+            'Seven of Pentacles',
+            'Eight of Pentacles',
+            'Nine of Pentacles',
+            'Ten of Pentacles',
+            'Page of Pentacles',
+            'Knight of Pentacles',
+            'Queen of Pentacles',
+            'King of Pentacles',
+            'Ace of Wands',
+            'Two of Wands',
+            'Three of Wands',
+            'Four of Wands',
+            'Five of Wands',
+            'Six of Wands',
+            'Seven of Wands',
+            'Eight of Wands',
+            'Nine of Wands',
+            'Ten of Wands',
+            'Page of Wands',
+            'Knight of Wands',
+            'Queen of Wands',
+            'King of Wands'
+            ]
 
 arcana_image_links = [
 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/340px-RWS_Tarot_00_Fool.jpg',
@@ -337,9 +335,9 @@ with col3:
     # st.write('Upright Magician: As a master manifestor, the Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. This is alchemy at its best!Now is the perfect time to move forward on an idea that you recently conceived. The seed of potential has sprouted, and you are being called to take action and bring your intention to fruition. The skills, knowledge and capabilities you have gathered along your life path have led you to where you are now, and whether or not you know it, you are ready to turn your ideas into reality.In your quest to manifest your goals, you must establish a clear vision of what you will create (and why) before you act. It is not enough to be motivated by ego (money, status, or fame) – you need to have a soul connection to your goals and intentions. You are a powerful, creative being, and this is your opportunity to bring your Higher Self in alignment with your day-to-day actions to create the future you want most.When you are clear about your ‘what’ and your ‘why’, the Magician calls on you to take inspired action. You will need focused attention and intense concentration to bring your goals to fruition. Focus on the ONE thing that will move you towards your goal. Commitment to the task is essential, so drop any distractions that may draw your focus away from what you want to achieve. Be methodical in your planning to make sure that you stay on track and carry out your tasks.')
 
     with st.expander("Upright Meaning"):
-         st.write("""
-             Upright Magician: As a master manifestor, the Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. This is alchemy at its best!Now is the perfect time to move forward on an idea that you recently conceived. The seed of potential has sprouted, and you are being called to take action and bring your intention to fruition. The skills, knowledge and capabilities you have gathered along your life path have led you to where you are now, and whether or not you know it, you are ready to turn your ideas into reality.In your quest to manifest your goals, you must establish a clear vision of what you will create (and why) before you act. It is not enough to be motivated by ego (money, status, or fame) – you need to have a soul connection to your goals and intentions. You are a powerful, creative being, and this is your opportunity to bring your Higher Self in alignment with your day-to-day actions to create the future you want most.When you are clear about your ‘what’ and your ‘why’, the Magician calls on you to take inspired action. You will need focused attention and intense concentration to bring your goals to fruition. Focus on the ONE thing that will move you towards your goal. Commitment to the task is essential, so drop any distractions that may draw your focus away from what you want to achieve. Be methodical in your planning to make sure that you stay on track and carry out your tasks.
-         """)
+         st.write(major_arcana_dict["""
+             {}
+         """.format(CARD3)][0])
     with st.expander("Reversed Meaning"):
          st.write("""
             PLACEHOLDER
