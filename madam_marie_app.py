@@ -315,9 +315,9 @@ with col1:
     st.write(major_arcana_dict["{}".format(CARD1)][1])
 
     with st.expander("Upright Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD1)[0]])
+         st.write(arcana_meanings_dict["{}".format(CARD1)][0])
     with st.expander("Reversed Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD1)[1]])
+         st.write(arcana_meanings_dict["{}".format(CARD1)][1])
 
 with col2:
     st.header("{}".format(CARD2))
