@@ -7,7 +7,7 @@ from alpha_vantage.timeseries import TimeSeries
 # import pandas_bokeh
 # from bokeh.plotting import figure, show
 from PIL import Image
-
+import pickle
 
 ################################ GET DATA ######################################
 
