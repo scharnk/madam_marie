@@ -271,10 +271,10 @@ arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a
   ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
 
 
-with open('madam_marie/meanings_upright.pkl', 'rb') as f:
+with open('https://github.com/scharnk/madam_marie/meanings_upright.pkl', 'rb') as f:
      meanings_upright = pickle.load(f)
 
-with open('madam_marie/meanings_reversed.pkl', 'rb') as f:
+with open('https://github.com/scharnk/madam_marie/meanings_reversed.pkl', 'rb') as f:
      meanings_reversed = pickle.load(f)
 
 
