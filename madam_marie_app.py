@@ -33,30 +33,6 @@ with header:
     st.text('- Streamlit app deployed using Heroku')
     st.text('- Tarot card images taken from Wikimedia')
 
-major_arcana = [
-             "Fool",
-             "The Magician",
-             "High Priestess",
-             "The Empress",
-             "The Emperor",
-             "Hierophant",
-             "Lovers",
-             "Chariot",
-             "Strength",
-             "Hermit",
-             "Wheel of Fortune",
-             "Justice",
-             "Hanged Man",
-             "Death",
-             "Temperance",
-             "Devil",
-             "Tower",
-             "Star",
-             "Moon",
-             "Sun",
-             "Judgement",
-             "World"]
-
 arcana = [
              "Fool",
              "The Magician",
@@ -270,27 +246,37 @@ arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a
  ['    The World Upright: Completion, integration, accomplishment, travel',
   ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
 
-
+# PICKLE RICKS #################################################################
 with open('meanings_upright.pkl', 'rb') as f:
      meanings_upright = pickle.load(f)
-
 with open('meanings_reversed.pkl', 'rb') as f:
      meanings_reversed = pickle.load(f)
+with open('meanings_keywords.pkl', 'rb') as f:
+     keywords_all = pickle.load(f)
+with open('meanings_descriptions.pkl', 'rb') as f:
+     descriptions_all = pickle.load(f)
 
+# ZIPPED DICTS #################################################################
+# CARD:URL dictionary
+URL_dict = dict(zip(arcana, arcana_image_links))
 
-arcana_dict = dict(zip(arcana, arcana_image_links))
-major_arcana_dict = dict(zip(major_arcana, arcana_keywords))
-# minor_arcana_dict = dict(zip(minor_arcana, minor_arcana_image_links))
-
+# CARD:MEANINGS dictionary
 meanings_li = [list(x) for x in zip(meanings_upright, meanings_reversed)]
-arcana_meanings_dict = dict(zip(arcana, meanings_li))
+meanings_dict = dict(zip(arcana, meanings_li))
 
+# CARD:KEYWORDS dictionary
+keywords_li_li = list(map(list, keywords_all))
+keywords_dict = dict(zip(arcana, keywords_li_li))
 
+# CARD:DESCRIPTIONS dictionary
+desc_dict = dict(zip(arcana, descriptions_all))
+
+# GOAL: create a large dictionary from which to call
+# CARD:[URLs, MEANINGS, KEYWORDS, & DESCRIPTIONS] dictionary
+
+################################################################################
 with sidebar:
     st.title('Select cards')
-
-    # list(major_arcana + minor_arcana))
-    # ["Fool","The Magician","High Priestess","The Empress","The Emperor","Hierophant","Lovers","Chariot","Strength","Hermit","Wheel of Fortune","Justice","Hanged Man","Death","Temperance","Devil","Tower","Star","Moon","Sun","Judgement","World"])
     CARD1 = st.selectbox('CARD 1', list(arcana))
     CARD2 = st.selectbox('CARD 2:', list(arcana))
     CARD3 = st.selectbox('CARD 3:', list(arcana))
@@ -303,56 +289,46 @@ with body:
     st.caption('- [Mind, Body, Soul]')
     st.caption('- [Background, Problem, Advice]')
 
-
 col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
     st.header("{}".format(CARD1))
-    st.image(arcana_dict["{}".format(CARD1)])
-    # st.markdown("{}".format())
-    st.write(major_arcana_dict["{}".format(CARD1)][0])
-    # arcana_meanings_dict['Fool'][0]
-    st.write(major_arcana_dict["{}".format(CARD1)][1])
+    st.image(URL_dict["{}".format(CARD1)])
+    st.write(keywords_dict["{}".format(CARD1)][0])
+    st.write(keywords_dict["{}".format(CARD1)][1])
 
     with st.expander("Upright Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD1)][0])
+         st.write(meanings_dict["{}".format(CARD1)][0])
     with st.expander("Reversed Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD1)][1])
+         st.write(meanings_dict["{}".format(CARD1)][1])
+    with st.expander("Card Symbolism"):
+         st.write(desc_dict["{}".format(CARD1)])
 
 with col2:
     st.header("{}".format(CARD2))
-    st.image(arcana_dict["{}".format(CARD2)])
-    # st.image("https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg")
-    st.write(major_arcana_dict["{}".format(CARD2)][0])
-    st.write(major_arcana_dict["{}".format(CARD2)][1])
+    st.image(URL_dict["{}".format(CARD2)])
+    st.write(keywords_dict["{}".format(CARD2)][0])
+    st.write(keywords_dict["{}".format(CARD2)][1])
 
     with st.expander("Upright Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD2)][0])
+         st.write(meanings_dict["{}".format(CARD2)][0])
     with st.expander("Reversed Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD2)][1])
+         st.write(meanings_dict["{}".format(CARD2)][1])
+    with st.expander("Card Symbolism"):
+         st.write(desc_dict["{}".format(CARD2)])
 
 with col3:
     st.header("{}".format(CARD3))
-    st.image(arcana_dict["{}".format(CARD3)])
-    st.write(major_arcana_dict["{}".format(CARD3)][0])
-    st.write(major_arcana_dict["{}".format(CARD3)][1])
-    # st.image("https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg")
-    # st.write('Upright Magician: As a master manifestor, the Magician brings you the tools, resources and energy you need to make your dreams come true. Seriously, everything you need right now is at your fingertips. You have the spiritual (fire), physical (earth), mental (air) and emotional (water) resources to manifest your desires. And when you combine them with the energy of the spiritual and earthly realms, you will become a manifestation powerhouse! The key is to bring these tools together synergistically so that the impact of what you create is greater than the separate parts. This is alchemy at its best!Now is the perfect time to move forward on an idea that you recently conceived. The seed of potential has sprouted, and you are being called to take action and bring your intention to fruition. The skills, knowledge and capabilities you have gathered along your life path have led you to where you are now, and whether or not you know it, you are ready to turn your ideas into reality.In your quest to manifest your goals, you must establish a clear vision of what you will create (and why) before you act. It is not enough to be motivated by ego (money, status, or fame) – you need to have a soul connection to your goals and intentions. You are a powerful, creative being, and this is your opportunity to bring your Higher Self in alignment with your day-to-day actions to create the future you want most.When you are clear about your ‘what’ and your ‘why’, the Magician calls on you to take inspired action. You will need focused attention and intense concentration to bring your goals to fruition. Focus on the ONE thing that will move you towards your goal. Commitment to the task is essential, so drop any distractions that may draw your focus away from what you want to achieve. Be methodical in your planning to make sure that you stay on track and carry out your tasks.')
+    st.image(URL_dict["{}".format(CARD3)])
+    st.write(keywords_dict["{}".format(CARD3)][0])
+    st.write(keywords_dict["{}".format(CARD3)][1])
 
     with st.expander("Upright Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD3)][0])
+         st.write(meanings_dict["{}".format(CARD3)][0])
     with st.expander("Reversed Meaning"):
-         st.write(arcana_meanings_dict["{}".format(CARD3)][1])
-    # st.image(['https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg', 'https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', 'https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg'], width=250)
-    # st.image('https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg', width=200)
-    # st.image('https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg', width=200)
-    # st.markdown("![Alt Text](https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg)")
-
-# https://en.m.wikipedia.org/wiki/The_Fool_(Tarot_card)#/media/File%3ARWS_Tarot_00_Fool.jpg
-# https://en.m.wikipedia.org/wiki/The_Magician_(Tarot_card)#/media/File%3ARWS_Tarot_01_Magician.jpg
-# https://en.m.wikipedia.org/wiki/Ace_of_Wands_(Tarot_card)#/media/File%3AWands01.jpg
-# https://www.sacred-texts.com/tarot/pkt/img/ar01.jpg
-# https://www.sacred-texts.com/tarot/pkt/img/ar02.jpg
+         st.write(meanings_dict["{}".format(CARD3)][1])
+    with st.expander("Card Symbolism"):
+         st.write(desc_dict["{}".format(CARD3)])
 
 ################################################################################
 # NEXT STEPS:
