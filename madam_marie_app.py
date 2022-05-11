@@ -284,9 +284,9 @@ desc_dict = dict(zip(arcana, descriptions_all))
 # for i in range(len(applist)):
 #     app = st.button(applist[i], key=get_random_string(8))
 
-def get_random_shuffle():
-    random_card_li = random.sample(arcana, 3)
-    return random_card_li
+# def get_random_shuffle():
+#     random_card_li = random.sample(arcana, 3)
+#     return random_card_li
 
 # for i,j in enumerate(arcana):
 #     app = st.button(applist[i], key=get_random_string(8))
@@ -297,6 +297,7 @@ with sidebar:
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
     if st.button('Random Draw'):
+        random_card_li = random.sample(arcana, 3)
         CARD1 = st.selectbox('CARD 1', random_card_li[0])
         CARD2 = st.selectbox('CARD 2', random_card_li[1])
         CARD3 = st.selectbox('CARD 3', random_card_li[2])
