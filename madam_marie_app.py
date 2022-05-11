@@ -299,10 +299,10 @@ with sidebar:
     if st.button('Random Draw'):
         random_card_li = random.sample(arcana, 3)
         meanings_dict["{}".format(CARD1)][0]
-        CARD1 = st.selectbox('CARD 1', random_card_li[0])
+        CARD1 = st.selectbox('CARD 1', st.write(random_card_li[0]))
         # CARD1 = st.selectbox('CARD 1', list(random_card_li[0]))
-        CARD2 = st.selectbox('CARD 2', random_card_li[1])
-        CARD3 = st.selectbox('CARD 3', random_card_li[2])
+        # CARD2 = st.selectbox('CARD 2', random_card_li[1])
+        # CARD3 = st.selectbox('CARD 3', random_card_li[2])
     else:
         CARD1 = st.selectbox('CARD 1', list(arcana))
         CARD2 = st.selectbox('CARD 2', list(arcana))
