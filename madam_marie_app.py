@@ -3,11 +3,9 @@ import streamlit as st
 import pandas as pd
 import os
 from dotenv import load_dotenv
-from alpha_vantage.timeseries import TimeSeries
-# import pandas_bokeh
-# from bokeh.plotting import figure, show
 from PIL import Image
 import pickle
+import random
 
 ################################ GET DATA ######################################
 
@@ -275,12 +273,37 @@ desc_dict = dict(zip(arcana, descriptions_all))
 # CARD:[URLs, MEANINGS, KEYWORDS, & DESCRIPTIONS] dictionary
 
 ################################################################################
+
+# def get_random_string(length):
+#     # Random string with the combination of lower and upper case
+#     letters = string.ascii_letters
+#     result_str = ''.join(random.choice(letters) for i in range(length))
+#     print("Random string is:", result_str)
+#
+# applist = ["Sentiment Analysis", "Word Cloud", "Topic Model"]
+# for i in range(len(applist)):
+#     app = st.button(applist[i], key=get_random_string(8))
+
+def get_random_shuffle():
+    random_card_li = random.sample(arcana, 3)
+    return random_card_li
+
+# for i,j in enumerate(arcana):
+#     app = st.button(applist[i], key=get_random_string(8))
+
 with sidebar:
     st.title('Select cards')
-    CARD1 = st.selectbox('CARD 1', list(arcana))
-    CARD2 = st.selectbox('CARD 2:', list(arcana))
-    CARD3 = st.selectbox('CARD 3:', list(arcana))
-
+    # CARD1 = st.selectbox('CARD 1', list(arcana))
+    # CARD2 = st.selectbox('CARD 2', list(arcana))
+    # CARD3 = st.selectbox('CARD 3', list(arcana))
+    if st.button('Random Draw'):
+        CARD1 = st.selectbox('CARD 1', random_card_li[0])
+        CARD2 = st.selectbox('CARD 2', random_card_li[1])
+        CARD3 = st.selectbox('CARD 3', random_card_li[2])
+    else:
+        CARD1 = st.selectbox('CARD 1', list(arcana))
+        CARD2 = st.selectbox('CARD 2', list(arcana))
+        CARD3 = st.selectbox('CARD 3', list(arcana))
 
 with body:
     st.subheader("The Three Card Tarot Spread")
