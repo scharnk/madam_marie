@@ -297,19 +297,19 @@ desc_dict = dict(zip(arcana, descriptions_all))
 
 with sidebar:
     st.title('SELECT CARDS')
-    st.title('Select cards')
+    # st.title('Select cards')
     # CARD1 = st.selectbox('CARD 1', list(arcana))
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
-    st.header('SELECT CARDS MANUALLY')
-    st.header('PAST')
+    # st.header('SELECT CARDS MANUALLY')
+    # st.header('PAST')
     CARD1 = st.selectbox('CARD 1', list(arcana))
-    st.header('PRESENT')
+    # st.header('PRESENT')
     CARD2 = st.selectbox('CARD 2', list(arcana))
-    st.header('FUTURE')
+    # st.header('FUTURE')
     CARD3 = st.selectbox('CARD 3', list(arcana))
-
-    button_result = st.button('RANDOM 3 CARD DRAW')
+    st.title('OR DRAW THREE CARDS')
+    button_result = st.button('RANDOM DRAW')
 
     if button_result:
         random_card_li = list(random.sample(arcana, 3))
@@ -325,10 +325,10 @@ with sidebar:
 
 with body:
     st.subheader("The Three Card Tarot Spread")
-    st.text('Three card tarot spreads can be used to represent several different meanings, including:')
-    st.caption('- [Past, Present, Future]')
-    st.caption('- [Mind, Body, Soul]')
-    st.caption('- [Background, Problem, Advice]')
+    st.write('Three card tarot spreads can be used to represent several different meanings, including:')
+    st.caption('* [Past, Present, Future]')
+    st.markdown('* [Mind, Body, Soul]')
+    st.write('* [Background, Problem, Advice]')
 
 col1, col2, col3 = st.columns([1, 1, 1])
 
