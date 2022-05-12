@@ -27,13 +27,13 @@ with header:
     st.title('Fortune Teller App')
      # Tarot Reader
     st.header('Web scraper for tarot images and meanings')
-    st.subheader('Select your own cards or click random draw')
+    st.write('Select three tarot cards on the side bar or use the random draw button, scroll down to read your fortune!')
     # st.markdown('''# Tarot Scraper''')
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
-    st.subheader('- Card descriptions scraped from BiddyTarot.com')
+    st.write('Card descriptions scraped from BiddyTarot.com')
     # st.text('- Streamlit app deployed using Heroku')
-    st.subheader('- Tarot card images are from Wikimedia')
+    st.write('Tarot card images are from Wikimedia')
 
 arcana = [
              "Fool",
@@ -308,26 +308,27 @@ with sidebar:
     CARD2 = st.selectbox('CARD 2', list(arcana))
     # st.header('FUTURE')
     CARD3 = st.selectbox('CARD 3', list(arcana))
-    st.title('OR DRAW THREE CARDS')
+    st.title('OR DRAW THREE')
     button_result = st.button('RANDOM DRAW')
 
     if button_result:
         random_card_li = list(random.sample(arcana, 3))
-        st.header('CARD 1')
+        # st.header('CARD 1')
+        st.subheader('CARD 1')
         CARD1 = random_card_li[0]
-        st.subheader(CARD1)
-        st.header('CARD 2')
+        st.text(CARD1)
+        st.subheader('CARD 2')
         CARD2 = random_card_li[1]
-        st.subheader(CARD2)
+        st.text(CARD2)
         st.header('CARD 3')
         CARD3 = random_card_li[2]
         st.subheader(CARD3)
 
 with body:
-    st.subheader("The Three Card Tarot Spread")
+    # st.subheader("The Three Card Tarot Spread")
     st.write('Three card tarot spreads can be used to represent several different meanings, including:')
-    st.caption('* [Past, Present, Future]')
-    st.markdown('* [Mind, Body, Soul]')
+    st.write('* [Past, Present, Future]')
+    st.write('* [Mind, Body, Soul]')
     st.write('* [Background, Problem, Advice]')
 
 col1, col2, col3 = st.columns([1, 1, 1])
