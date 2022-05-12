@@ -301,7 +301,9 @@ with sidebar:
     CARD2 = st.selectbox('CARD 2', list(arcana))
     CARD3 = st.selectbox('CARD 3', list(arcana))
 
-    st.button('Random 3 Card Draw'):
+    button_result = st.button('Random 3 Card Draw')
+
+    if button_result:
         random_card_li = list(random.sample(arcana, 3))
         st.header('CARD 1')
         CARD1 = random_card_li[0]
