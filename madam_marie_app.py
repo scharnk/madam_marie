@@ -31,7 +31,7 @@ with header:
     # st.markdown('''# Tarot Scraper''')
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
-    st.write('Card descriptions are scraped from BiddyTarot.com :crystal_ball:, and tarot card images are from Wikimedia :heart:')
+    st.write('Card descriptions are scraped from BiddyTarot.com, and tarot card images are from Wikimedia :heart:')
     # st.text('- Streamlit app deployed using Heroku')
     # st.write('Tarot card images are from Wikimedia')
 
