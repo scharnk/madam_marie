@@ -303,12 +303,15 @@ with sidebar:
         third_random =  random_card_li[2]
         # meanings_dict["{}".format(CARD1)][0]
         st.write('CARD 1')
-        CARD1 = st.write(first_random)
+        CARD1 = first_random
+        st.write(first_random)
         # CARD1 = st.selectbox('CARD 1', list(random_card_li[0]))
         st.write('CARD 2')
-        CARD2 = st.write(random_card_li[1])
+        CARD2 = random_card_li[1]
+        st.write(random_card_li[1])
         st.write('CARD 3')
-        CARD3 = st.write(third_random)
+        CARD3 = third_random
+        st.write(third_random)
         st.write(CARD1)
         st.write(CARD2)
         st.write(CARD3)
