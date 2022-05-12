@@ -16,7 +16,7 @@ key = os.getenv("API_KEY")
 
 ############################### STREAMLIT ######################################
 # Use the full page instead of a narrow central column
-st.set_page_config(layout="wide")
+st.set_page_config(page_title='Fortune Teller', page_icon=":crystal_ball:", layout="wide")
 
 header = st.container()
 body = st.container()
@@ -25,6 +25,7 @@ sidebar = st.sidebar.container()
 
 with header:
     st.title('Fortune Teller Tarot Reader')
+    st.markdown('''# Tarot Scraper''')
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
     st.text('- Card descriptions scraped from BiddyTarot.com')
