@@ -296,7 +296,12 @@ with sidebar:
     # CARD1 = st.selectbox('CARD 1', list(arcana))
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
-    if st.button('Random 3 Card Draw'):
+    if:
+        st.header('Select Cards Manually')
+        CARD1 = st.selectbox('CARD 1', list(arcana))
+        CARD2 = st.selectbox('CARD 2', list(arcana))
+        CARD3 = st.selectbox('CARD 3', list(arcana))
+    else st.button('Random 3 Card Draw'):
         random_card_li = list(random.sample(arcana, 3))
         # first_random = random_card_li[0]
         # second_random = random_card_li[1]
@@ -311,7 +316,8 @@ with sidebar:
         st.header('CARD 3')
         CARD3 = random_card_li[2]
         st.subheader(CARD3)
-    elif st.button('Select Cards Manually'):
+    else:
+        st.header('Select Cards Manually')
         CARD1 = st.selectbox('CARD 1', list(arcana))
         CARD2 = st.selectbox('CARD 2', list(arcana))
         CARD3 = st.selectbox('CARD 3', list(arcana))
