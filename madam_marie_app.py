@@ -296,30 +296,25 @@ with sidebar:
     # CARD1 = st.selectbox('CARD 1', list(arcana))
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
-    if st.button('Random Draw'):
+    if st.button('Random 3 Card Draw'):
         random_card_li = list(random.sample(arcana, 3))
-        first_random = random_card_li[0]
-        second_random = random_card_li[1]
-        third_random =  random_card_li[2]
+        # first_random = random_card_li[0]
+        # second_random = random_card_li[1]
+        # third_random =  random_card_li[2]
         # meanings_dict["{}".format(CARD1)][0]
-        st.write('CARD 1')
-        CARD1 = first_random
-        st.write(first_random)
-        # CARD1 = st.selectbox('CARD 1', list(random_card_li[0]))
-        st.write('CARD 2')
+        st.header('CARD 1')
+        CARD1 = random_card_li[0]
+        st.write(random_card_li[0])
+        st.header('CARD 2')
         CARD2 = random_card_li[1]
         st.write(random_card_li[1])
-        st.write('CARD 3')
-        CARD3 = third_random
-        st.write(third_random)
-        st.write(CARD1)
-        st.write(CARD2)
-        st.write(CARD3)
-    else:
+        st.header('CARD 3')
+        CARD3 = random_card_li[2]
+        st.subheader(CARD3)
+    elif st.button('Select Cards Manually'):
         CARD1 = st.selectbox('CARD 1', list(arcana))
         CARD2 = st.selectbox('CARD 2', list(arcana))
         CARD3 = st.selectbox('CARD 3', list(arcana))
-        st.write(CARD1)
 
 with body:
     st.subheader("The Three Card Tarot Spread")
