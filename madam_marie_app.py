@@ -297,7 +297,9 @@ with sidebar:
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
     st.header('Select Cards Manually')
-    CARD1 = st.selectbox('CARD 1', list(arcana))
+    st.header('CARD 1')
+    CARD1 = st.selectbox('', list(arcana))
+    st.header('CARD 2')
     CARD2 = st.selectbox('CARD 2', list(arcana))
     CARD3 = st.selectbox('CARD 3', list(arcana))
 
@@ -307,10 +309,10 @@ with sidebar:
         random_card_li = list(random.sample(arcana, 3))
         st.header('CARD 1')
         CARD1 = random_card_li[0]
-        st.write(random_card_li[0])
+        st.subheader(CARD1)
         st.header('CARD 2')
         CARD2 = random_card_li[1]
-        st.write(random_card_li[1])
+        st.subheader(CARD2)
         st.header('CARD 3')
         CARD3 = random_card_li[2]
         st.subheader(CARD3)
