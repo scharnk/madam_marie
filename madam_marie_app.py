@@ -310,6 +310,8 @@ with sidebar:
         st.write('CARD 3')
         CARD3 = st.write(third_random)
         st.write(CARD1)
+        st.write(CARD2)
+        st.write(CARD3)
     else:
         CARD1 = st.selectbox('CARD 1', list(arcana))
         CARD2 = st.selectbox('CARD 2', list(arcana))
