@@ -31,9 +31,9 @@ with header:
     # st.markdown('''# Tarot Scraper''')
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
-    st.write('Card descriptions scraped from BiddyTarot.com')
+    st.write('Card descriptions scraped from BiddyTarot.com, and tarot card images are from Wikimedia :heart:')
     # st.text('- Streamlit app deployed using Heroku')
-    st.write('Tarot card images are from Wikimedia')
+    # st.write('Tarot card images are from Wikimedia')
 
 arcana = [
              "Fool",
@@ -320,9 +320,9 @@ with sidebar:
         st.subheader('CARD 2')
         CARD2 = random_card_li[1]
         st.text(CARD2)
-        st.header('CARD 3')
+        st.subheader('CARD 3')
         CARD3 = random_card_li[2]
-        st.subheader(CARD3)
+        st.text(CARD3)
 
 with body:
     # st.subheader("The Three Card Tarot Spread")
