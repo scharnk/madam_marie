@@ -24,13 +24,16 @@ body = st.container()
 sidebar = st.sidebar.container()
 
 with header:
-    st.title('Fortune Teller Tarot Reader')
-    st.markdown('''# Tarot Scraper''')
+    st.title('Fortune Teller App')
+     # Tarot Reader
+    st.header('Web scraper for tarot images and meanings')
+    st.subheader('Select your own cards or click random draw')
+    # st.markdown('''# Tarot Scraper''')
     img = Image.open("banner_image_cropped.jpg")
     st.image(img)
-    st.text('- Card descriptions scraped from BiddyTarot.com')
-    st.text('- Streamlit app deployed using Heroku')
-    st.text('- Tarot card images taken from Wikimedia')
+    st.subheader('- Card descriptions scraped from BiddyTarot.com')
+    # st.text('- Streamlit app deployed using Heroku')
+    st.subheader('- Tarot card images are from Wikimedia')
 
 arcana = [
              "Fool",
@@ -199,51 +202,51 @@ arcana_image_links = [
 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg',
 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg'
 ]
-
-arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a free spirit',
-  ' The Fool Reversed: Holding back, recklessness, risk-taking   '],
- ['    The Magician Upright: Manifestation, resourcefulness, power, inspired action',
-  ' The Magician Reversed: Manipulation, poor planning, untapped talents   '],
- ['    The High Priestess Upright: Intuition, sacred knowledge, divine feminine, the subconscious mind',
-  ' The High Priestess Reversed: Secrets, disconnected from intuition, withdrawal and silence   '],
- ['    The Empress Upright: Femininity, beauty, nature, nurturing, abundance',
-  ' The Empress Reversed: Creative block, dependence on others   '],
- ['    The Emperor Upright: Authority, establishment, structure, a father figure',
-  ' The Emperor Reversed: Domination, excessive control, lack of discipline, inflexibility   '],
- ['    The Hierophant Upright: Spiritual wisdom, religious beliefs, conformity, tradition,institutions',
-  ' The Hierophant Reversed: Personal beliefs, freedom, challenging the status quo   '],
- ['    The Lovers Upright: Love, harmony, relationships, values alignment, choices',
-  ' The Lovers Reversed: Self-love, disharmony, imbalance, misalignment of values   '],
- ['    The Chariot Upright: Control, willpower, success, action, determination',
-  ' The Chariot Reversed: Self-discipline, opposition, lack of directionThe Chariot   '],
- ['    Strength Upright: Strength, courage, persuasion, influence, compassion',
-  ' Strength Reversed: Inner strength, self-doubt, low energy, raw emotion   '],
- ['    The Hermit Upright: Soul-searching, introspection, being alone, inner guidance',
-  ' The Hermit Reversed: Isolation, loneliness, withdrawal   '],
- ['    Wheel of Fortune Upright: Good luck, karma, life cycles, destiny, a turning point',
-  ' Wheel of Fortune Reversed: Bad luck, resistance to change, breaking cycles   '],
- ['    Justice Upright: Justice, fairness, truth, cause and effect, law',
-  ' Justice Reversed: Unfairness, lack of accountability, dishonestyJustice   '],
- ['    The Hanged Man Upright: Pause, surrender, letting go, new perspectives',
-  ' The Hanged Man Reversed: Delays, resistance, stalling, indecision   '],
- ['    Death Upright: Endings, change, transformation, transition',
-  ' Death Reversed: Resistance to change, personal transformation, inner purging   '],
- ['    Temperance Upright: Balance, moderation, patience, purpose',
-  ' Temperance Reversed: Imbalance, excess, self-healing, re-alignment   '],
- ['    The Devil Upright: Shadow self, attachment, addiction, restriction, sexuality',
-  ' The Devil Reversed: Releasing limiting beliefs, exploring dark thoughts, detachment   '],
- ['    The Tower Upright: Sudden change, upheaval, chaos, revelation, awakening',
-  ' The Tower Reversed: Personal transformation, fear of change, averting disaster   '],
- ['    The Star Upright: Hope, faith, purpose, renewal, spirituality',
-  ' The Star Reversed: Lack of faith, despair, self-trust, disconnection   '],
- ['    The Moon Upright: Illusion, fear, anxiety, subconscious, intuition',
-  ' The Moon Reversed: Release of fear, repressed emotion, inner confusion   '],
- ['    The Sun Upright: Positivity, fun, warmth, success, vitality',
-  ' The Sun Reversed: Inner child, feeling down, overly optimistic   '],
- ['    Judgement Upright: Judgement, rebirth, inner calling, absolution',
-  ' Judgement Reversed: Self-doubt, inner critic, ignoring the call   '],
- ['    The World Upright: Completion, integration, accomplishment, travel',
-  ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
+#
+# arcana_keywords = [['    The Fool Upright: Beginnings, innocence, spontaneity, a free spirit',
+#   ' The Fool Reversed: Holding back, recklessness, risk-taking   '],
+#  ['    The Magician Upright: Manifestation, resourcefulness, power, inspired action',
+#   ' The Magician Reversed: Manipulation, poor planning, untapped talents   '],
+#  ['    The High Priestess Upright: Intuition, sacred knowledge, divine feminine, the subconscious mind',
+#   ' The High Priestess Reversed: Secrets, disconnected from intuition, withdrawal and silence   '],
+#  ['    The Empress Upright: Femininity, beauty, nature, nurturing, abundance',
+#   ' The Empress Reversed: Creative block, dependence on others   '],
+#  ['    The Emperor Upright: Authority, establishment, structure, a father figure',
+#   ' The Emperor Reversed: Domination, excessive control, lack of discipline, inflexibility   '],
+#  ['    The Hierophant Upright: Spiritual wisdom, religious beliefs, conformity, tradition,institutions',
+#   ' The Hierophant Reversed: Personal beliefs, freedom, challenging the status quo   '],
+#  ['    The Lovers Upright: Love, harmony, relationships, values alignment, choices',
+#   ' The Lovers Reversed: Self-love, disharmony, imbalance, misalignment of values   '],
+#  ['    The Chariot Upright: Control, willpower, success, action, determination',
+#   ' The Chariot Reversed: Self-discipline, opposition, lack of directionThe Chariot   '],
+#  ['    Strength Upright: Strength, courage, persuasion, influence, compassion',
+#   ' Strength Reversed: Inner strength, self-doubt, low energy, raw emotion   '],
+#  ['    The Hermit Upright: Soul-searching, introspection, being alone, inner guidance',
+#   ' The Hermit Reversed: Isolation, loneliness, withdrawal   '],
+#  ['    Wheel of Fortune Upright: Good luck, karma, life cycles, destiny, a turning point',
+#   ' Wheel of Fortune Reversed: Bad luck, resistance to change, breaking cycles   '],
+#  ['    Justice Upright: Justice, fairness, truth, cause and effect, law',
+#   ' Justice Reversed: Unfairness, lack of accountability, dishonestyJustice   '],
+#  ['    The Hanged Man Upright: Pause, surrender, letting go, new perspectives',
+#   ' The Hanged Man Reversed: Delays, resistance, stalling, indecision   '],
+#  ['    Death Upright: Endings, change, transformation, transition',
+#   ' Death Reversed: Resistance to change, personal transformation, inner purging   '],
+#  ['    Temperance Upright: Balance, moderation, patience, purpose',
+#   ' Temperance Reversed: Imbalance, excess, self-healing, re-alignment   '],
+#  ['    The Devil Upright: Shadow self, attachment, addiction, restriction, sexuality',
+#   ' The Devil Reversed: Releasing limiting beliefs, exploring dark thoughts, detachment   '],
+#  ['    The Tower Upright: Sudden change, upheaval, chaos, revelation, awakening',
+#   ' The Tower Reversed: Personal transformation, fear of change, averting disaster   '],
+#  ['    The Star Upright: Hope, faith, purpose, renewal, spirituality',
+#   ' The Star Reversed: Lack of faith, despair, self-trust, disconnection   '],
+#  ['    The Moon Upright: Illusion, fear, anxiety, subconscious, intuition',
+#   ' The Moon Reversed: Release of fear, repressed emotion, inner confusion   '],
+#  ['    The Sun Upright: Positivity, fun, warmth, success, vitality',
+#   ' The Sun Reversed: Inner child, feeling down, overly optimistic   '],
+#  ['    Judgement Upright: Judgement, rebirth, inner calling, absolution',
+#   ' Judgement Reversed: Self-doubt, inner critic, ignoring the call   '],
+#  ['    The World Upright: Completion, integration, accomplishment, travel',
+#   ' The World Reversed: Seeking personal closure, short-cuts, delays   ']]
 
 # PICKLE RICKS #################################################################
 with open('meanings_upright.pkl', 'rb') as f:
@@ -293,18 +296,20 @@ desc_dict = dict(zip(arcana, descriptions_all))
 #     app = st.button(applist[i], key=get_random_string(8))
 
 with sidebar:
+    st.title('SELECT CARDS')
     st.title('Select cards')
     # CARD1 = st.selectbox('CARD 1', list(arcana))
     # CARD2 = st.selectbox('CARD 2', list(arcana))
     # CARD3 = st.selectbox('CARD 3', list(arcana))
-    st.header('Select Cards Manually')
-    st.header('CARD 1')
-    CARD1 = st.selectbox('', list(arcana))
-    st.header('CARD 2')
+    st.header('SELECT CARDS MANUALLY')
+    st.header('PAST')
+    CARD1 = st.selectbox('CARD 1', list(arcana))
+    st.header('PRESENT')
     CARD2 = st.selectbox('CARD 2', list(arcana))
+    st.header('FUTURE')
     CARD3 = st.selectbox('CARD 3', list(arcana))
 
-    button_result = st.button('Random 3 Card Draw')
+    button_result = st.button('RANDOM 3 CARD DRAW')
 
     if button_result:
         random_card_li = list(random.sample(arcana, 3))
