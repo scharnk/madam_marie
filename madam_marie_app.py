@@ -309,10 +309,12 @@ with sidebar:
         CARD2 = st.write(random_card_li[1])
         st.write('CARD 3')
         CARD3 = st.write(third_random)
+        st.write(CARD1)
     else:
         CARD1 = st.selectbox('CARD 1', list(arcana))
         CARD2 = st.selectbox('CARD 2', list(arcana))
         CARD3 = st.selectbox('CARD 3', list(arcana))
+        st.write(CARD1)
 
 with body:
     st.subheader("The Three Card Tarot Spread")
