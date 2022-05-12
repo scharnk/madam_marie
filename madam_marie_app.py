@@ -335,7 +335,7 @@ col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
     st.header("{}".format(CARD1))
-    st.image(URL_dict["{}".format(CARD1)], use_column_width=always)
+    st.image(URL_dict["{}".format(CARD1)], use_column_width='always')
     st.write(keywords_dict["{}".format(CARD1)][0])
     st.write(keywords_dict["{}".format(CARD1)][1])
 
@@ -348,7 +348,7 @@ with col1:
 
 with col2:
     st.header("{}".format(CARD2))
-    st.image(URL_dict["{}".format(CARD2)], use_column_width=always)
+    st.image(URL_dict["{}".format(CARD2)], use_column_width="always")
     st.write(keywords_dict["{}".format(CARD2)][0])
     st.write(keywords_dict["{}".format(CARD2)][1])
 
@@ -361,7 +361,7 @@ with col2:
 
 with col3:
     st.header("{}".format(CARD3))
-    st.image(URL_dict["{}".format(CARD3)], use_column_width=always)
+    st.image(URL_dict["{}".format(CARD3)], use_column_width='always')
     st.write(keywords_dict["{}".format(CARD3)][0])
     st.write(keywords_dict["{}".format(CARD3)][1])
 
